@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{3BBF6804-2718-490A-AEF1-666DA2504123}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GraphVersionOne/PriorityQueue.cs">
+    <Files>
+      <File FileName="ConsoleApp3/Station.cs" Line="1" Column="1" />
+      <File FileName="ConsoleApp3/StationNetwork.cs" Line="1" Column="1" />
+      <File FileName="ConsoleApp3/GraphController.cs" Line="1" Column="1" />
+      <File FileName="ConsoleApp3/ZoneOneGraph.cs" Line="155" Column="40" />
+      <File FileName="ConsoleApp3/ZoneOneGraphInterface.cs" Line="1" Column="1" />
+      <File FileName="ConsoleApp3/Network.cs" Line="1" Column="1" />
+      <File FileName="ConsoleApp3/Logger.cs" Line="1" Column="1" />
+      <File FileName="ConsoleApp3/Program.cs" Line="1" Column="1" />
+      <File FileName="ConsoleApp3/PriorityQueue.cs" Line="22" Column="37" />
+      <File FileName="GraphVersionOne/Network.cs" Line="1" Column="1" />
+      <File FileName="GraphVersionOne/Logger.cs" Line="1" Column="1" />
+      <File FileName="GraphVersionOne/GraphController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ConsoleApp3" expanded="True">
+            <Node name="GraphVersionOne" expanded="True">
+              <Node name="PriorityQueue.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ConsoleApp3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
