@@ -4,43 +4,62 @@ using System.Collections.Generic;
 
 namespace ConsoleApp3
 {
-	public class PriorityQueue<T, U>
-	{
+    public class PriorityQueue
+    {
+        //creates a new linked list instance for priority queue
+        private LinkedList queue = new LinkedList();
 
-        private LinkedList<KeyValuePair<T, U>> queue = new LinkedList<KeyValuePair<T, U>>();
-
-  //      public PriorityQueue(Station firstStation, Station lastStation, int weight)
-		//{
-		//	this.firstStation = firstStation;
-  //          this.lastStation = lastStation;
-		//	this.weight = weight;
-		//}
-
-        //min heap representation of queue
-        public void Enqueue(T item, U priority)
+        public void Enqueue(Station station, int distance)
         {
-            queue.AddLast(new KeyValuePair<T, U>(item, priority));
-            queue = new LinkedList<KeyValuePair<T, U>>(queue.OrderBy(x => x.Value));
+            PriorityQueueNode newNode = new PriorityQueueNode(station, distance);
+
+            if (queue.IsEmpty() || distance <= queue.GetHead().Distance)
+            {
+                //cross check in LinkedList implementation that this method is present
+                queue.InsertAtHead(newNode);
+            }
+            else
+            {
+                LinkedListNode current = queue.GetHead();
+
+                //cross check in LinkedList implementation that this method is present
+                while (current.Next != null && current.Next.Data.Distance < distance)
+                {
+                    current = current.Next;
+                }
+
+                //cross check in LinkedList implementation that this method is present
+                current.InsertAfter(newNode);
+            }
         }
 
-        public T Dequeue()
+        public Station Dequeue()
         {
-            //check if queue is empty
-            //shift first element in queue to the next item ie +1
-            if (queue.Count == 0)
+            if (queue.IsEmpty())
             {
-                throw new InvalidOperationException("Queue is empty");
+                throw new Exception("Priority queue is empty");
             }
 
-            T item = queue.First.Value.Key;
-            queue.RemoveFirst();
-            return item;
+            //cross check in LinkedList implementation that this method is present
+            Station station = queue.GetHead().Data.Station;
+
+            //cross check in LinkedList implementation that this method is present
+            queue.DeleteHead();
+
+            return station;
         }
 
-        public bool isEmpty()
+        public bool IsEmpty()
         {
-            return (lengthOfQueue == 0);
+            return queue.IsEmpty();
+        }
+
+        public void PrintQueue()
+        {
+            //cross check in LinkedList implementation that this method is present
+            queue.PrintList();
         }
     }
+
 }
 
