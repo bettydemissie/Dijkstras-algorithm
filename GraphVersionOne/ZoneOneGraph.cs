@@ -34,7 +34,7 @@ public class ZoneOneGraph:ZoneOneGraphInterface
         var stationNetwork = new StationNetwork(station, networks);
         AddStationNetworkToList(stationNetwork);
         //log new created station network
-      logger.LogNewlyCreatedStationNetworkWithoutNetwork(stationNetwork);
+        logger.LogNewlyCreatedStationNetworkWithoutNetwork(stationNetwork);
     }
     public void CreateStationNetwork(Station station, Network network)
     {

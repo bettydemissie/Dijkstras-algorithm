@@ -3,11 +3,13 @@ namespace ConsoleApp3
 {
 	public class MenuController
 	{
+
         private GraphController controller;
 
-        public MenuController()
+        public MenuController(GraphController controller)
 		{
-            controller = new GraphController();
+            this.controller = controller;
+
         }
 
         public void managerMenu()
@@ -41,10 +43,10 @@ namespace ConsoleApp3
                         {
                             //add/remove delay
                             Console.WriteLine("What is the Station you would like to start from?");
-                            string? sourceStation = Convert.ToString(Console.ReadLine()) ?? ""; //if no input string is then null
+                            string sourceStation = Convert.ToString(Console.ReadLine()) ?? ""; //if no input string is then null
 
                             Console.WriteLine("What is the Station you would like to end at?");  //if no input string is then null
-                            string? destStation = Convert.ToString(Console.ReadLine()) ?? "";
+                            string destStation = Convert.ToString(Console.ReadLine()) ?? "";
 
                             Console.WriteLine("What is the line name?");  //if no input string is then null
                             string line = Convert.ToString(Console.ReadLine()) ?? "";
@@ -129,20 +131,20 @@ namespace ConsoleApp3
                     {
 
                         Console.WriteLine("What is the Station you would like to start from?");
-                        string sourceStation = Convert.ToString(Console.ReadLine()) ?? "";
+                        string? sourceStation = Convert.ToString(Console.ReadLine()) ?? "";
 
-                        if (!sourceStation.GetType().Equals(typeof(string)))
-                        {
-                            throw new ArgumentException("Input string must be a string data type.", "sourceStation");
-                        }
+                        //if (!sourceStation.GetType().Equals(typeof(string)))
+                        //{
+                        //    throw new ArgumentException("Input string must be a string data type.", "sourceStation");
+                        //}
 
                         Console.WriteLine("What is the Station you would like to end at?");
-                        string destStation = Convert.ToString(Console.ReadLine()) ?? "";
+                        string? destStation = Convert.ToString(Console.ReadLine()) ?? "";
 
-                        if (!destStation.GetType().Equals(typeof(string)))
-                        {
-                            throw new ArgumentException("Input string must be a string data type.", "destStation");
-                        }
+                        //if (!destStation.GetType().Equals(typeof(string)))
+                        //{
+                        //    throw new ArgumentException("Input string must be a string data type.", "destStation");
+                        //}
 
                         controller.FindFastestWalkingRoutes(sourceStation, destStation);
                     }

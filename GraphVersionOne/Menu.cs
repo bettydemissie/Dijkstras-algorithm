@@ -6,11 +6,13 @@ namespace ConsoleApp3
 	public class Menu
 	{
 		private MenuController controller;
+        public StationCreation stations;
 
 		public Menu()
 		{
-			controller = new MenuController();
-		}
+            stations = new StationCreation();
+            controller = new MenuController(stations.controller);
+        }
 
 
         public void runMenu()

@@ -4,12 +4,19 @@ public class GraphController
 {
     private ZoneOneGraphInterface graph;
     private Logger logger;
+
     public GraphController(ZoneOneGraphInterface zoneOneGraph)
     {
         this.graph = zoneOneGraph;
         logger = new Logger();
     }
-    
+
+    public GraphController()
+    {
+        this.graph = graph;
+        logger = new Logger();
+    }
+
     public void PrintAllDelayedRoutes()
     {
         var delayedRouteExists = false;
@@ -53,6 +60,7 @@ public class GraphController
 
     public void FindFastestWalkingRoutes(string sourceStation, string destStation)
     {
+        //added to check if grapgh
         var source = graph.fetchStation(sourceStation);
         var dest = graph.fetchStation(destStation);
         if (source != null && dest != null)
@@ -67,8 +75,8 @@ public class GraphController
     
     public void AddDelayToNetwork(string sourceStation, string destStation, string line, int delay)
     {
-        var source = graph.fetchStation(sourceStation);
-        var dest = graph.fetchStation(destStation);
+        var source = graph?.fetchStation(sourceStation);
+        var dest = graph?.fetchStation(destStation);
         if (source != null  && dest != null)
         {
             var firstNetwork = graph.GetNetworkInAStationNetwork(source, dest, line);

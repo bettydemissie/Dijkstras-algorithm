@@ -50,7 +50,7 @@ var controller = new GraphController(graph);
 
 //controller.AddDelayToNetwork("Baker", "GreatPortland", "Circle",10);
 //controller.OpenOrCloseStationsNetwork("Baker", "GreatPortland", "Circle", "Bridge Closed",true);
-//controller.FastestWalkingRoutes("MarbleArch", "GreatPortland");
+controller.FindFastestWalkingRoutes("Marble Arch", "GreatPortland");
 //controller.PrintAllDelayedRoutes();
 //controller.PrintAllClosedRoutes();
 
