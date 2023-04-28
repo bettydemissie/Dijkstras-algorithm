@@ -16,7 +16,9 @@ namespace ConsoleApp3
         public void managerMenu()
         {
             Console.WriteLine("Please enter the secret password to access this menu");
-            int inputPassword = Convert.ToInt32(Console.ReadLine());
+            //int inputPassword = Convert.ToInt32(Console.ReadLine());
+            int inputPassword = int.TryParse(Console.ReadLine(), out int inputValue) ? inputValue : -1;
+
 
 
             if (inputPassword == adminPassword)
@@ -35,7 +37,8 @@ namespace ConsoleApp3
                 Console.WriteLine();
                 Console.WriteLine("   Please enter your choice: ");
 
-                int managerOption = Convert.ToInt32(Console.ReadLine());
+                //int managerOption = Convert.ToInt32(Console.ReadLine());
+                int managerOption = int.TryParse(Console.ReadLine(), out int inputValue2) ? inputValue2 : -1;
 
 
                 switch (managerOption)
@@ -124,7 +127,9 @@ namespace ConsoleApp3
             Console.WriteLine();
             Console.WriteLine("   Please enter your choice: ");
 
-            int customerOption = Convert.ToInt32(Console.ReadLine());
+            //int customerOption = Convert.ToInt32(Console.ReadLine());
+            int customerOption = int.TryParse(Console.ReadLine(), out int inputValue) ? inputValue : -1;
+
 
             switch (customerOption)
             {
