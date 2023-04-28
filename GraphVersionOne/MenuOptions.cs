@@ -1,12 +1,13 @@
 ﻿using System;
 namespace ConsoleApp3
 {
-	public class MenuController
+	public class MenuOptions
 	{
 
         private GraphController controller;
+        private const int adminPassword = 0000;
 
-        public MenuController(GraphController controller)
+        public MenuOptions(GraphController controller)
 		{
             this.controller = controller;
 
@@ -15,10 +16,10 @@ namespace ConsoleApp3
         public void managerMenu()
         {
             Console.WriteLine("Please enter the secret password to access this menu");
-            int password = Convert.ToInt32(Console.ReadLine());
+            int inputPassword = Convert.ToInt32(Console.ReadLine());
 
 
-            if (password == 0000)
+            if (inputPassword == adminPassword)
             {
                 Console.WriteLine("##################################");
                 Console.WriteLine("#      Transport for London      #");
