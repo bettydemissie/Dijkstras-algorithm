@@ -3,13 +3,19 @@ namespace ConsoleApp3
 {
     public class PriorityQueueNode
     {
-        public Station station { get; set; }
-        public int distance { get; set; }
+        public Object node { get; set; }
+        public int index { get; set; }
 
-        public PriorityQueueNode(Station station, int distance)
+        public PriorityQueueNode(Object node, int index)
         {
-            this.station = station;
-            this.distance = distance;
+            this.node = node;
+            this.index = index;
+        }
+
+        public PriorityQueueNode(Object node)
+        {
+            this.node = node;
+            this.index = index;
         }
     }
 }

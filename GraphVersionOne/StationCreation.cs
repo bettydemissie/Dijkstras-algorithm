@@ -56,8 +56,6 @@ namespace ConsoleApp3
             controller.FindFastestWalkingRoutes("Marble Arch", "GreatPortland");
             //controller.PrintAllDelayedRoutes();
             //controller.PrintAllClosedRoutes();
-
-
             //var network = graph.GetNetworkInAStationNetwork(GreatPortland, Baker, "Circle");
 
         }

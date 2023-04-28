@@ -158,13 +158,77 @@ namespace ConsoleApp3
     //}
 
 
+    //public class LinkedList
+    //{
+    //    public ListNode head;
+
+    //    public LinkedList()
+    //    {
+    //        head = null;
+    //    }
+
+    //    public bool isEmpty()
+    //    {
+    //        return head == null;
+    //    }
+
+    //    public void insertAtHead(PriorityQueueNode node)
+    //    {
+    //        head = new ListNode(node, head);
+    //    }
+
+    //    public void insertAfter(PriorityQueueNode node, ListNode prevNode)
+    //    {
+    //        if (prevNode == null)
+    //        {
+    //            throw new ArgumentException("Previous node cannot be null.");
+    //        }
+
+    //        ListNode newNode = new ListNode(node, prevNode.next);
+    //        prevNode.next = newNode;
+    //    }
+
+    //    public void removeAtHead()
+    //    {
+    //        if (head == null)
+    //        {
+    //            throw new InvalidOperationException("List is empty.");
+    //        }
+
+    //        head = head.next;
+    //    }
+
+    //    public void removeAfter(ListNode prevNode)
+    //    {
+    //        if (prevNode == null)
+    //        {
+    //            throw new ArgumentException("Previous node cannot be null.");
+    //        }
+
+    //        if (prevNode.next == null)
+    //        {
+    //            throw new InvalidOperationException("No next node to remove.");
+    //        }
+
+    //        prevNode.next = prevNode.next.next;
+    //    }
+
+    //    public ListNode getHead()
+    //    {
+    //        return head;
+    //    }
+    //}
+
+
     public class LinkedList
     {
         public ListNode head;
+        public ListNode tail;
 
         public LinkedList()
         {
             head = null;
+            tail = null;
         }
 
         public bool isEmpty()
@@ -174,28 +238,69 @@ namespace ConsoleApp3
 
         public void insertAtHead(PriorityQueueNode node)
         {
-            head = new ListNode(node, head);
+            ListNode newNode = new ListNode(node);
+
+            if (isEmpty())
+            {
+                head = newNode;
+                tail = newNode;
+            }
+            else
+            {
+                newNode.next = head;
+                head = newNode;
+            }
         }
 
-        public void insertAfter(PriorityQueueNode node, ListNode prevNode)
+        public void insertAfter(PriorityQueueNode node, PriorityQueueNode prevNode)
         {
-            if (prevNode == null)
+            ListNode newNode = new ListNode(node);
+            ListNode prevListNode = findItem(prevNode);
+
+            if (prevListNode == null)
             {
-                throw new ArgumentException("Previous node cannot be null.");
+                throw new ArgumentException("Previous node not found.");
             }
 
-            ListNode newNode = new ListNode(node, prevNode.next);
-            prevNode.next = newNode;
+            ListNode nextNode = prevListNode.next;
+            prevListNode.next = newNode;
+            newNode.next = nextNode;
+
+            if (nextNode == null)
+            {
+                tail = newNode;
+            }
+        }
+
+        public void insertAtTail(PriorityQueueNode node)
+        {
+            ListNode newNode = new ListNode(node);
+
+            if (isEmpty())
+            {
+                head = newNode;
+                tail = newNode;
+            }
+            else
+            {
+                tail.next = newNode;
+                tail = newNode;
+            }
         }
 
         public void removeAtHead()
         {
-            if (head == null)
+            if (isEmpty())
             {
                 throw new InvalidOperationException("List is empty.");
             }
 
             head = head.next;
+
+            if (head == null)
+            {
+                tail = null;
+            }
         }
 
         public void removeAfter(ListNode prevNode)
@@ -205,17 +310,49 @@ namespace ConsoleApp3
                 throw new ArgumentException("Previous node cannot be null.");
             }
 
-            if (prevNode.next == null)
+            ListNode currentNode = prevNode.next;
+
+            if (currentNode == null)
             {
                 throw new InvalidOperationException("No next node to remove.");
             }
 
-            prevNode.next = prevNode.next.next;
+            prevNode.next = currentNode.next;
+
+            if (currentNode.next == null)
+            {
+                tail = prevNode;
+            }
+        }
+
+        public ListNode findItem(PriorityQueueNode node)
+        {
+            ListNode current = head;
+
+            while (current != null)
+            {
+                if (current.data == node)
+                {
+                    return current;
+                }
+
+                current = current.next;
+            }
+
+            return null;
         }
 
         public ListNode getHead()
         {
             return head;
         }
+
+        public ListNode getTail()
+        {
+            return tail;
+        }
+
+        
     }
+
 }

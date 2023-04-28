@@ -5,13 +5,13 @@ namespace ConsoleApp3
 {
 	public class Menu
 	{
-		private MenuController controller;
+		private MenuOptions controller;
         public StationCreation stations;
 
 		public Menu()
 		{
             stations = new StationCreation();
-            controller = new MenuController(stations.controller);
+            controller = new MenuOptions(stations.controller);
         }
 
 

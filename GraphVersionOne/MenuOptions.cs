@@ -99,7 +99,7 @@ namespace ConsoleApp3
 
                     default:
                         {
-                            Console.WriteLine("Please enter a number between 1 - 2");
+                            Console.WriteLine("Please enter a number between 1 - 5");
                         }
                         break;
                 }
@@ -134,18 +134,18 @@ namespace ConsoleApp3
                         Console.WriteLine("What is the Station you would like to start from?");
                         string? sourceStation = Convert.ToString(Console.ReadLine()) ?? "";
 
-                        //if (!sourceStation.GetType().Equals(typeof(string)))
-                        //{
-                        //    throw new ArgumentException("Input string must be a string data type.", "sourceStation");
-                        //}
+                        if (!sourceStation.GetType().Equals(typeof(string)))
+                        {
+                            throw new ArgumentException("Input string must be a string data type.", "sourceStation");
+                        }
 
                         Console.WriteLine("What is the Station you would like to end at?");
                         string? destStation = Convert.ToString(Console.ReadLine()) ?? "";
 
-                        //if (!destStation.GetType().Equals(typeof(string)))
-                        //{
-                        //    throw new ArgumentException("Input string must be a string data type.", "destStation");
-                        //}
+                        if (!destStation.GetType().Equals(typeof(string)))
+                        {
+                            throw new ArgumentException("Input string must be a string data type.", "destStation");
+                        }
 
                         controller.FindFastestWalkingRoutes(sourceStation, destStation);
                     }
