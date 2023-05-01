@@ -5,16 +5,19 @@ namespace ConsoleApp3
 	{
         private GraphController controller;
         private const int adminPassword = 0000;
+        private Logger logger;
+
 
         public MenuOptions(GraphController controller)
         {
             this.controller = controller;
+            logger = new Logger();
 
         }
 
         public void managerMenu()
         {
-            Console.WriteLine("Please enter the secret password to access this menu");
+            logger.Log("Please enter the secret password to access this menu");
             int inputPassword = Convert.ToInt32(Console.ReadLine());
 
 
@@ -42,16 +45,16 @@ namespace ConsoleApp3
                     case 1:
                         {
                             //add/remove delay
-                            Console.WriteLine("What is the Station you would like to start from?");
+                            logger.Log("What is the Station you would like to start from?");
                             string sourceStation = Convert.ToString(Console.ReadLine()) ?? ""; //if no input string is then null
 
-                            Console.WriteLine("What is the Station you would like to end at?");  //if no input string is then null
+                            logger.Log("What is the Station you would like to end at?");  //if no input string is then null
                             string destStation = Convert.ToString(Console.ReadLine()) ?? "";
 
-                            Console.WriteLine("What is the line name?");  //if no input string is then null
+                            logger.Log("What is the line name?");  //if no input string is then null
                             string line = Convert.ToString(Console.ReadLine()) ?? "";
 
-                            Console.WriteLine("What is the delay time?");
+                            logger.Log("What is the delay time?");
                             int delay = Convert.ToInt32(Console.ReadLine());
 
                             controller.AddDelayToNetwork(sourceStation, destStation, line, delay);
@@ -98,7 +101,7 @@ namespace ConsoleApp3
 
                     default:
                         {
-                            Console.WriteLine("Please enter a number between 1 - 5");
+                            logger.Log("Please enter a number between 1 - 5");
                         }
                         break;
                 }
@@ -112,11 +115,11 @@ namespace ConsoleApp3
 
         public void customerMenu()
         {
-            Console.WriteLine("##################################");
-            Console.WriteLine("#      Transport for London      #");
-            Console.WriteLine("#    Getting you there faster    #");
-            Console.WriteLine("################################## ");
-            Console.WriteLine();
+            logger.Log("##################################");
+            logger.Log("#      Transport for London      #");
+            logger.Log("#    Getting you there faster    #");
+            logger.Log("################################## ");
+            logger.Log("");
             Console.WriteLine();
             Console.WriteLine("1. Find the fastest route between two stations ");
             Console.WriteLine("2. Display Tube Information ");
