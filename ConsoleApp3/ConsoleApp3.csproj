@@ -11,4 +11,12 @@
       <Compile Remove="StationLine.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="EPPlus" />
+      <None Remove="Microsoft.Office.Interop.Excel" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="EPPlus" Version="6.2.2" />
+      <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+    </ItemGroup>
 </Project>

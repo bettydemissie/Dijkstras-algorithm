@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using static System.Collections.Specialized.BitVector32;
 
 namespace ConsoleApp3
