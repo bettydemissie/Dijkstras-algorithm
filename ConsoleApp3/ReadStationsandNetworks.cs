@@ -58,11 +58,16 @@ namespace ConsoleApp3
 
             LinkedList<Network> arrayNetwork = new LinkedList<Network>();
 
-            var index = 0;
+            //var index = 0;
             foreach (string[] network in networkArray)
             {
-                Console.WriteLine(index++ + (network[3]));
-                arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], int.Parse(network[3])));
+                //Console.WriteLine(index++ + (network[3]));
+                //arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], int.Parse(network[3])));
+                if ((int.TryParse(network[3], out int stationDistance)))
+                {
+                    arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], stationDistance));
+                }
+                
             }
             return arrayNetwork;
 
