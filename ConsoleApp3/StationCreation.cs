@@ -13,20 +13,27 @@ namespace ConsoleApp3
 
             ReadExcel read = new ReadExcel();
             ReadStationsandNetworks text = new ReadStationsandNetworks(read);
-            string filepath = "/Users/Ifeoma1/Downloads/Zone-1-walkingdistance.xlsx";
-            string filepathstations = "/Users/Ifeoma1/Downloads/StationsExcel.xlsx";
+            //string filepath = "/Users/Ifeoma1/Downloads/Zone-1-walkingdistance.xlsx";
+            //string filepathstations = "/Users/Ifeoma1/Downloads/StationsExcel.xlsx";
+            string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
+            string filepathstations = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
 
             var stations = text.GetTheStations(filepathstations);
 
             var networks = text.GetNetworks(filepath);
 
-            foreach (Network item in networks)
-            {
-                Console.WriteLine(item);
+            //foreach (Network item in networks)
+            //{
+            //    Console.WriteLine(item);
 
-            }
+            //}
 
             Console.WriteLine("\n");
+
+            //create station network
+
+            CreateStationNetwork(networks);
+            Console.WriteLine("BREAK!!!!!!!!!");
 
 
             //Station Baker = graph.CreateStation("Baker");
@@ -67,9 +74,10 @@ namespace ConsoleApp3
             //graph.AddNetworkToStationNetwork(Baker, CircleLineOne);
 
 
-            //controller = new GraphController(graph);
+            controller = new GraphController(graph);
             ////graph.ConnectedNetworksToAStation(Baker);
             ////graph.GetAllPathFrom(MarbleArch, GreatPortland);
+            //graph.FindStationNetworkBy(new Station("Baker Street"));
 
             ////controller.AddDelayToNetwork("Baker", "GreatPortland", "Circle",10);
             ////controller.OpenOrCloseStationsNetwork("Baker", "GreatPortland", "Circle", "Bridge Closed",true);
@@ -78,6 +86,17 @@ namespace ConsoleApp3
             ////controller.PrintAllClosedRoutes();
             ////var network = graph.GetNetworkInAStationNetwork(GreatPortland, Baker, "Circle");
 
+        }
+
+        public void CreateStationNetwork(LinkedList<Network> arrayNetwork)
+        {
+
+            foreach (Network network in arrayNetwork)
+            {
+                graph.AddNetworkToStationNetwork(network.getSourceStation(), network);
+            }
+
+            
         }
     }
 }

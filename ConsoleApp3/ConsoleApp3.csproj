@@ -14,9 +14,11 @@
     <ItemGroup>
       <None Remove="EPPlus" />
       <None Remove="Microsoft.Office.Interop.Excel" />
+      <None Remove="System.Text.Json" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="EPPlus" Version="6.2.2" />
       <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+      <PackageReference Include="System.Text.Json" Version="7.0.2" />
     </ItemGroup>
 </Project>

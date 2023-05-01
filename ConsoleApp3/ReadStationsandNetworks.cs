@@ -72,6 +72,9 @@ namespace ConsoleApp3
             return arrayNetwork;
 
         }
+
+        
+
     }
 }
 

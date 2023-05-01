@@ -153,7 +153,7 @@ public class GraphController
         var paths =  new LinkedList<Network>();
         Network destnetwork = edgeToV[dvindex];
         paths.AddLast(destnetwork);
-        while (destnetwork.getSourceStation() != source)
+        while (destnetwork.getSourceStation().getName() != source.getName())
         {
             var svindex = graph.GetIndexOfAStationFromList(destnetwork.getSourceStation());
             Network network = edgeToV[svindex];
