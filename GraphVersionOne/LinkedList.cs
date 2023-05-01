@@ -4,7 +4,7 @@ namespace ConsoleApp3
     public class LinkedList
     {
         public ListNode head;
-        protected int length = 0;
+        public int length = 0;
         public ListNode tail;
 
         public LinkedList()
