@@ -1,4 +1,26 @@
 ﻿<Properties StartupConfiguration="{6B90B6A9-D919-4D51-8662-B35470DF7062}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ReadStationsandNetworks.cs">
+    <Files>
+      <File FileName="ReadStationsandNetworks.cs" Line="74" Column="1" />
+      <File FileName="Benchmarking.cs" Line="19" Column="23" />
+      <File FileName="ReadExcel.cs" Line="27" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ConsoleApp3" expanded="True">
+            <Node name="ConsoleApp3" expanded="True" />
+            <Node name="GraphVersionOne" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ConsoleApp3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
