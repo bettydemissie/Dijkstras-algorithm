@@ -7,4 +7,12 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Remove="EPPlus" />
+      <None Remove="Microsoft.Office.Interop.Excel" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="EPPlus" Version="6.2.3" />
+      <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+    </ItemGroup>
 </Project>

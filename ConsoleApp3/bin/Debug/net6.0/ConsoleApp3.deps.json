@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ConsoleApp3/1.0.0": {
         "dependencies": {
-          "EPPlus": "6.2.2",
+          "EPPlus": "6.2.3",
           "Microsoft.Office.Interop.Excel": "15.0.4795.1001",
           "System.Text.Json": "7.0.2"
         },
@@ -16,7 +16,7 @@
           "ConsoleApp3.dll": {}
         }
       },
-      "EPPlus/6.2.2": {
+      "EPPlus/6.2.3": {
         "dependencies": {
           "EPPlus.Interfaces": "6.1.1",
           "EPPlus.System.Drawing": "6.1.1",
@@ -27,8 +27,8 @@
         },
         "runtime": {
           "lib/net6.0/EPPlus.dll": {
-            "assemblyVersion": "6.2.2.0",
-            "fileVersion": "6.2.2.0"
+            "assemblyVersion": "6.2.3.0",
+            "fileVersion": "6.2.3.0"
           }
         }
       },
@@ -270,12 +270,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "EPPlus/6.2.2": {
+    "EPPlus/6.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SqKZBCYDwZjlBQwsptLSmtptV07I57QClF981IXDIiF4hpvDuzGnGk8kS6t59ZQsaiJ0QnCmanylXDaRBqB1ug==",
-      "path": "epplus/6.2.2",
-      "hashPath": "epplus.6.2.2.nupkg.sha512"
+      "sha512": "sha512-Lyp6zJHNU1QaDIcSheBCazqlqgs+8ByHGYwU9vEsbY7EQfPhd0nnejcHrM5DqaWdoXvKuyPoWBYNSz3iIyUNUQ==",
+      "path": "epplus/6.2.3",
+      "hashPath": "epplus.6.2.3.nupkg.sha512"
     },
     "EPPlus.Interfaces/6.1.1": {
       "type": "package",

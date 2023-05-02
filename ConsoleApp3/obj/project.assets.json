@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "EPPlus/6.2.2": {
+      "EPPlus/6.2.3": {
         "type": "package",
         "dependencies": {
           "EPPlus.Interfaces": "6.1.1",
@@ -396,15 +396,15 @@
     }
   },
   "libraries": {
-    "EPPlus/6.2.2": {
-      "sha512": "SqKZBCYDwZjlBQwsptLSmtptV07I57QClF981IXDIiF4hpvDuzGnGk8kS6t59ZQsaiJ0QnCmanylXDaRBqB1ug==",
+    "EPPlus/6.2.3": {
+      "sha512": "Lyp6zJHNU1QaDIcSheBCazqlqgs+8ByHGYwU9vEsbY7EQfPhd0nnejcHrM5DqaWdoXvKuyPoWBYNSz3iIyUNUQ==",
       "type": "package",
-      "path": "epplus/6.2.2",
+      "path": "epplus/6.2.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "EPPlusLogo.png",
-        "epplus.6.2.2.nupkg.sha512",
+        "epplus.6.2.3.nupkg.sha512",
         "epplus.nuspec",
         "lib/net35/EPPlus.dll",
         "lib/net35/EPPlus.xml",
@@ -967,25 +967,25 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "EPPlus >= 6.2.2",
+      "EPPlus >= 6.2.3",
       "Microsoft.Office.Interop.Excel >= 15.0.4795.1001",
       "System.Text.Json >= 7.0.2"
     ]
   },
   "packageFolders": {
-    "/Users/bettydemissie/.nuget/packages/": {}
+    "/Users/Ifeoma1/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/ConsoleApp3.csproj",
+      "projectUniqueName": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/ConsoleApp3.csproj",
       "projectName": "ConsoleApp3",
-      "projectPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/ConsoleApp3.csproj",
-      "packagesPath": "/Users/bettydemissie/.nuget/packages/",
-      "outputPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/",
+      "projectPath": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/ConsoleApp3.csproj",
+      "packagesPath": "/Users/Ifeoma1/.nuget/packages/",
+      "outputPath": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/bettydemissie/.nuget/NuGet/NuGet.Config"
+        "/Users/Ifeoma1/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1011,7 +1011,7 @@
         "dependencies": {
           "EPPlus": {
             "target": "Package",
-            "version": "[6.2.2, )"
+            "version": "[6.2.3, )"
           },
           "Microsoft.Office.Interop.Excel": {
             "target": "Package",
@@ -1038,7 +1038,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }

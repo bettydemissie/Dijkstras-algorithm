@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Xml.Linq;
+
 namespace ConsoleApp3
 {
     public class LinkedList
@@ -64,7 +66,7 @@ namespace ConsoleApp3
             return tail;
         }
 
-        public void insertAtHead(PriorityQueueNode node)
+        public void AddFirst(PriorityQueueNode node)
         {
             ListNode newNode = new ListNode(node);
 
@@ -104,7 +106,7 @@ namespace ConsoleApp3
             }
         }
 
-        public void insertAtTail(PriorityQueueNode node)
+        public void AddLast(PriorityQueueNode node)
         {
             ListNode newNode = new ListNode(node);
 
@@ -159,6 +161,30 @@ namespace ConsoleApp3
                 tail = prevNode;
                 length--;
             }
+        }
+
+        public ListNode ElementAt(int index)
+        {
+            int currentIndex = 0;
+            ListNode current = head;
+
+            while (current != null)
+            {
+                if (currentIndex == index)
+                {
+                    return current;
+                }
+
+                current = current.getNext();
+                currentIndex++;
+            }
+
+            return null; // Return null if the index is out of range
+        }
+
+        public int Count()
+        {
+            return length;
         }
 
         public ListNode findItem(PriorityQueueNode node)

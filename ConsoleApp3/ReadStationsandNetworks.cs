@@ -12,28 +12,6 @@ namespace ConsoleApp3
             this.read = read;
         }
 
-
-            //public List<Station> GetStationsFromWorkbookTwo()
-            //{
-            //    foreach()
-            //    {
-
-            //    }
-
-            //} 
-
-            //public Station CreateStationsFromExcel()
-            //{
-            //          CheckIfStationExist(string station)
-
-            //          filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
-            //	read.Excel(filepath);
-            //	read.Get2DList();
-
-
-
-            //}
-
         
         public LinkedList<Station> GetTheStations(string filepath)
         {
@@ -43,10 +21,9 @@ namespace ConsoleApp3
 
             foreach (string[] stat in stringArray)
             {
-                //if (stringArray.Count > 1)
-                //{
-                    IndexOneItem.AddLast(new Station(stat[0]));
-                //}
+                
+                 IndexOneItem.AddLast(new Station(stat[0]));
+                
 
             }
             return IndexOneItem;
@@ -58,11 +35,8 @@ namespace ConsoleApp3
 
             LinkedList<Network> arrayNetwork = new LinkedList<Network>();
 
-            //var index = 0;
             foreach (string[] network in networkArray)
             {
-                //Console.WriteLine(index++ + (network[3]));
-                //arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], int.Parse(network[3])));
                 if ((int.TryParse(network[3], out int stationDistance)))
                 {
                     arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], stationDistance));
@@ -72,9 +46,6 @@ namespace ConsoleApp3
             return arrayNetwork;
 
         }
-
-        
-
     }
 }
 

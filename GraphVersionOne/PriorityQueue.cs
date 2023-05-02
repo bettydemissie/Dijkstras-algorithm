@@ -20,7 +20,7 @@ namespace ConsoleApp3
 
             if (queue.isEmpty() || distance <= queue.getHead().getData().index)
             {
-                queue.insertAtHead(newNode);
+                queue.AddFirst(newNode);
             }
             else
             {

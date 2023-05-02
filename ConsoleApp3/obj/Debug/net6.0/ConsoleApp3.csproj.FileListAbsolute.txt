@@ -88,3 +88,6 @@
 /Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/Debug/net6.0/ConsoleApp3.csproj.CopyComplete
 /Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/Debug/net6.0/ConsoleApp3.genruntimeconfig.cache
 /Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/Debug/net6.0/ref/ConsoleApp3.dll
+/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/bin/Debug/net6.0/System.Text.Encodings.Web.dll
+/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/bin/Debug/net6.0/System.Text.Json.dll
+/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll

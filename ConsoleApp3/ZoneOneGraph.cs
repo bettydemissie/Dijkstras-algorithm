@@ -278,13 +278,13 @@ public class ZoneOneGraph:ZoneOneGraphInterface
         return false;
     }
     
-    public Station fetchStation(string sourcestation)
+    public StationNetwork fetchStation(string sourcestation)
     {
         foreach (var stationNetwork in stationNetworks)
         {
             if (stationNetwork.getStation().getName() == sourcestation)
             {
-                return stationNetwork.getStation();
+                return stationNetwork;
             }
         }
 

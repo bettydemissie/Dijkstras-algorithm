@@ -64,6 +64,7 @@ namespace ConsoleApp3
                     case 2:
                         {
                             //indicate a route is impossible or becomes possible
+                            //controller.OpenOrCloseStationsNetwork();
                         }
                         break;
 

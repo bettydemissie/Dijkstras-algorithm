@@ -72,7 +72,6 @@ namespace ConsoleApp3
             else
             {
                 //if value in cell is null return nothing
-
                 return "";
             }
         }
