@@ -53,8 +53,8 @@ public class GraphController
 
     public void FindFastestWalkingRoutes(string sourceStation, string destStation)
     {
-        var source = graph.fetchStation(sourceStation);
-        var dest = graph.fetchStation(destStation);
+        var source = graph.fetchStation(sourceStation).getStation();
+        var dest = graph.fetchStation(destStation).getStation();
         if (source != null && dest != null)
         {
             djikstra(source,dest);
@@ -67,8 +67,8 @@ public class GraphController
     
     public void AddDelayToNetwork(string sourceStation, string destStation, string line, int delay)
     {
-        var source = graph.fetchStation(sourceStation);
-        var dest = graph.fetchStation(destStation);
+        var source = graph.fetchStation(sourceStation).getStation();
+        var dest = graph.fetchStation(destStation).getStation();
         if (source != null  && dest != null)
         {
             var firstNetwork = graph.GetNetworkInAStationNetwork(source, dest, line);
@@ -87,8 +87,8 @@ public class GraphController
     
     public void OpenOrCloseStationsNetwork(string sourceStation, string destStation, string line, string reason, bool closeStatus)
     {
-        var source = graph.fetchStation(sourceStation);
-        var dest = graph.fetchStation(destStation);
+        var source = graph.fetchStation(sourceStation).getStation();
+        var dest = graph.fetchStation(destStation).getStation();
         if (source != null  && dest != null)
         {
             var firstNetwork = graph.GetNetworkInAStationNetwork(source, dest, line);
@@ -107,7 +107,7 @@ public class GraphController
     public void DisplayTubeInformation(string sourceStation)
     {
         //validation check
-        var source = graph.fetchStation(sourceStation);
+        var source = graph.fetchStation(sourceStation).getStation();
         if (source != null)
         {
             logger.LogStation(source);
