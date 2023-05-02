@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ConsoleApp3
+namespace GraphVersionOne
 {
     // Enumeration types for tube Staion access & status
 

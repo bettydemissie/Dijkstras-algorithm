@@ -1,6 +1,6 @@
-using System.Diagnostics;
+using System;
 
-namespace ConsoleApp3;
+namespace GraphVersionOne;
 
 public class ZoneOneGraph:ZoneOneGraphInterface
 {

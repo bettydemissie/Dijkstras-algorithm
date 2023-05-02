@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Drawing;
 
-namespace ConsoleApp3
-{
+namespace GraphVersionOne;
+
 	public class Menu
 	{
 		private MenuOptions controller;
@@ -70,5 +70,5 @@ namespace ConsoleApp3
         }
             
     }
-}
+
 

@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace ConsoleApp3;
+namespace GraphVersionOne;
 
 public interface ZoneOneGraphInterface
 {
