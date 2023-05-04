@@ -128,17 +128,17 @@ public class GraphController
     private void djikstra(Station source, Station dest)
     {
         //an array to all distances of all vertices in the graph
-        int[] disToV = new int[graph.GetStationNetworks().Count];
+        int[] disToV = new int[graph.GetStationNetworks().Count()];
         //initialize each value with infinity
         graph.InitializeDistances(disToV, source);
         //an array to store networks (edgeToV)
-        Network[] edgeToV = new Network[graph.GetStationNetworks().Count];
+        Network[] edgeToV = new Network[graph.GetStationNetworks().Count()];
         
         //initialize a priority queue
         PriorityQueue<Station, int> priorityQueue = new PriorityQueue<Station, int>();
         priorityQueue.Enqueue(source,0);
 
-        while (priorityQueue.Count > 0)
+        while (priorityQueue.Count() > 0)
         {
             //get nearest station/vertex
             var nearestStation = priorityQueue.Dequeue();

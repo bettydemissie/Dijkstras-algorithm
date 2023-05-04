@@ -163,7 +163,7 @@ public class ZoneOneGraph:ZoneOneGraphInterface
     }
     public int GetIndexOfAStationFromList(Station station)
     {
-        for (int i = 0; i < stationNetworks.Count; i++)
+        for (int i = 0; i < stationNetworks.Count(); i++)
         {
             if (stationNetworks.ElementAt(i).getStation().getName() == station.getName())
             {
@@ -176,7 +176,7 @@ public class ZoneOneGraph:ZoneOneGraphInterface
     public void InitializeDistances(int[] distances, Station source)
     {
         logger.LogAllStationNetworks(stationNetworks);
-        for (int i = 0; i < stationNetworks.Count; i++)
+        for (int i = 0; i < stationNetworks.Count(); i++)
         {
             if (stationNetworks.ElementAt(i).getStation().getName() == source.getName())
             {
@@ -192,7 +192,7 @@ public class ZoneOneGraph:ZoneOneGraphInterface
     {
         int distance = ComputeTotalTime(secondpath);
         Console.WriteLine(distance);
-        if (firstpath.Count != 0)
+        if (firstpath.Count() != 0)
         {
             int currentResult = ComputeTotalTime(firstpath);
             if (distance < currentResult)
@@ -223,10 +223,11 @@ public class ZoneOneGraph:ZoneOneGraphInterface
             queue.AddLast(list);
         }
         
-        while (queue.Count > 0)
+        while (queue.Count() > 0)
         {
-            LinkedList<Network> pathList = queue.First();
-            Network path = queue.First().Last();
+            LinkedList<Network> pathList = queue.First(); //head
+            Network path = queue.First().Last(); //head and tail
+
             queue.RemoveFirst();
             var destinationNode = path.getDestinationStation();
            

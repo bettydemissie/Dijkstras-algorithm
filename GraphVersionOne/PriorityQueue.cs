@@ -2,60 +2,134 @@
 
 namespace GraphVersionOne;
 
-public class PriorityQueue
-{
-    //priority queue is a type of linked list
-    private LinkedList queue;
+//public class PriorityQueue
+//{
+//    //priority queue is a type of linked list
+//    private LinkedList<T> queue;
 
-    public PriorityQueue()
+//    public PriorityQueue()
+//    {
+//        queue = new LinkedList<T>();
+//    }
+
+//    public void Enqueue(Station station, int distance)
+//    {
+//        PriorityQueueNode newNode = new PriorityQueueNode(station, distance);
+
+//        if (queue.isEmpty() || distance <= queue.getHead().getData().index)
+//        {
+//            queue.AddFirst(newNode);
+//        }
+//        else
+//        {
+//            ListNode<T> current = queue.getHead();
+
+//            while (current.getNext() != null && current.getNext().getData().index < distance)
+//            {
+//                current = current.getNext();
+//            }
+
+//            PriorityQueueNode newCurrent = new PriorityQueueNode(current);
+
+//            queue.insertAfter(newNode, newCurrent);
+//        }
+//    }
+
+//    public PriorityQueueNode Dequeue()
+//    {
+//        if (queue.isEmpty())
+//        {
+//            throw new InvalidOperationException("Queue is empty.");
+//        }
+
+//        PriorityQueueNode result = queue.getHead().getData();
+//        queue.removeAtHead();
+//        return result;
+//    }
+
+//    public bool IsEmpty()
+//    {
+//        return queue.isEmpty();
+//    }
+
+//    public void PrintQueue()
+//    {
+
+//        queue.printList();
+//    }
+//}
+
+public class PriorityQueue<TElement, TPriority>
+{
+    private LinkedList<PriorityQueueNode<TElement, TPriority>> queue;
+    private IComparer<TPriority> comparer;
+
+    public PriorityQueue(IComparer<TPriority> comparer = null)
     {
-        queue = new LinkedList();
+        queue = new LinkedList<PriorityQueueNode<TElement, TPriority>>();
+        this.comparer = comparer ?? new DefaultComparer<TPriority>();
     }
 
-    public void Enqueue(Station station, int distance)
+    public void Enqueue(TElement element, TPriority priority)
     {
-        PriorityQueueNode newNode = new PriorityQueueNode(station, distance);
+        PriorityQueueNode<TElement, TPriority> newNode = new PriorityQueueNode<TElement, TPriority>(element, priority);
 
-        if (queue.isEmpty() || distance <= queue.getHead().getData().index)
+        if (queue.IsEmpty() || comparer.Compare(priority, queue.GetHead().Value.Priority) <= 0)
         {
             queue.AddFirst(newNode);
         }
         else
         {
-            ListNode current = queue.getHead();
+            ListNode<PriorityQueueNode<TElement, TPriority>> current = queue.GetHead();
 
-            while (current.getNext() != null && current.getNext().getData().index < distance)
+            while (current.Next != null && comparer.Compare(current.Next.Value.Priority, priority) < 0)
             {
-                current = current.getNext();
+                current = current.Next;
             }
 
-            PriorityQueueNode newCurrent = new PriorityQueueNode(current);
-
-            queue.insertAfter(newNode, newCurrent);
+            queue.InsertAfter(newNode, current.Value);
         }
     }
 
-    public PriorityQueueNode Dequeue()
+    public PriorityQueueNode<TElement, TPriority> Dequeue()
     {
-        if (queue.isEmpty())
+        if (queue.IsEmpty())
         {
             throw new InvalidOperationException("Queue is empty.");
         }
 
-        PriorityQueueNode result = queue.getHead().getData();
-        queue.removeAtHead();
+        PriorityQueueNode<TElement, TPriority> result = queue.GetHead().Value;
+        queue.RemoveAtHead();
         return result;
+    }
+
+    public int Count()
+    {
+        return length;
     }
 
     public bool IsEmpty()
     {
-        return queue.isEmpty();
+        return queue.IsEmpty();
     }
 
     public void PrintQueue()
     {
-        
-        queue.printList();
+        queue.PrintList();
     }
 }
 
+
+//remove 
+public class DefaultComparer<T> : IComparer<T>
+{
+    public int Compare(T x, T y)
+    {
+        if (x is IComparable<T> comparable)
+        {
+            return comparable.CompareTo(y);
+        }
+
+        throw new InvalidOperationException("No valid comparer found for type T.");
+    }
+}

@@ -1,21 +1,14 @@
 ﻿using System;
 namespace GraphVersionOne;
 
-public class PriorityQueueNode
+public class PriorityQueueNode<TElement, TPriority>
 {
-    public Object node { get; set; }
-    public int index { get; set; }
+    public TElement Element { get; set; }
+    public TPriority Priority { get; set; }
 
-    public PriorityQueueNode(Object node, int index)
+    public PriorityQueueNode(TElement Element, TPriority Priority)
     {
-        this.node = node;
-        this.index = index;
-    }
-
-    public PriorityQueueNode(Object node)
-    {
-        this.node = node;
-        this.index = index;
+        this.Element = Element;
+        this.Priority = Priority;
     }
 }
-
