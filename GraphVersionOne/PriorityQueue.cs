@@ -62,19 +62,19 @@ namespace GraphVersionOne;
 public class PriorityQueue<TElement, TPriority>
 {
     private LinkedList<PriorityQueueNode<TElement, TPriority>> queue;
-    private IComparer<TPriority> comparer;
+    private Comparison<TPriority> comparison;
 
-    public PriorityQueue(IComparer<TPriority> comparer = null)
+    public PriorityQueue(Comparison<TPriority> comparison = null)
     {
         queue = new LinkedList<PriorityQueueNode<TElement, TPriority>>();
-        this.comparer = comparer ?? new DefaultComparer<TPriority>();
+        this.comparison = comparison ?? DefaultComparison;
     }
 
     public void Enqueue(TElement element, TPriority priority)
     {
         PriorityQueueNode<TElement, TPriority> newNode = new PriorityQueueNode<TElement, TPriority>(element, priority);
 
-        if (queue.IsEmpty() || comparer.Compare(priority, queue.First().Value.Priority) <= 0)
+        if (queue.IsEmpty() || comparison(priority, queue.First().Value.Priority) <= 0)
         {
             queue.AddFirst(newNode);
         }
@@ -82,7 +82,7 @@ public class PriorityQueue<TElement, TPriority>
         {
             ListNode<PriorityQueueNode<TElement, TPriority>> current = queue.First();
 
-            while (current.Next != null && comparer.Compare(current.Next.Value.Priority, priority) < 0)
+            while (current.Next != null && comparison(current.Next.Value.Priority, priority) < 0)
             {
                 current = current.Next;
             }
@@ -117,19 +117,15 @@ public class PriorityQueue<TElement, TPriority>
     {
         queue.PrintList();
     }
-}
 
-
-//remove 
-public class DefaultComparer<T> : IComparer<T>
-{
-    public int Compare(T x, T y)
+    private static int DefaultComparison(TPriority x, TPriority y)
     {
-        if (x is IComparable<T> comparable)
+        if (x is IComparable<TPriority> comparable)
         {
             return comparable.CompareTo(y);
         }
 
-        throw new InvalidOperationException("No valid comparer found for type T.");
+        throw new InvalidOperationException("No valid comparer found for type TPriority.");
     }
 }
+
