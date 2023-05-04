@@ -74,13 +74,13 @@ public class PriorityQueue<TElement, TPriority>
     {
         PriorityQueueNode<TElement, TPriority> newNode = new PriorityQueueNode<TElement, TPriority>(element, priority);
 
-        if (queue.IsEmpty() || comparer.Compare(priority, queue.GetHead().Value.Priority) <= 0)
+        if (queue.IsEmpty() || comparer.Compare(priority, queue.First().Value.Priority) <= 0)
         {
             queue.AddFirst(newNode);
         }
         else
         {
-            ListNode<PriorityQueueNode<TElement, TPriority>> current = queue.GetHead();
+            ListNode<PriorityQueueNode<TElement, TPriority>> current = queue.First();
 
             while (current.Next != null && comparer.Compare(current.Next.Value.Priority, priority) < 0)
             {
@@ -98,14 +98,14 @@ public class PriorityQueue<TElement, TPriority>
             throw new InvalidOperationException("Queue is empty.");
         }
 
-        PriorityQueueNode<TElement, TPriority> result = queue.GetHead().Value;
-        queue.RemoveAtHead();
+        PriorityQueueNode<TElement, TPriority> result = queue.First().Value;
+        queue.RemoveFirst();
         return result;
     }
 
     public int Count()
     {
-        return length;
+        return queue.length;
     }
 
     public bool IsEmpty()

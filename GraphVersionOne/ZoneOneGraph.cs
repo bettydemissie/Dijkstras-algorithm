@@ -93,12 +93,27 @@ public class ZoneOneGraph:ZoneOneGraphInterface
     }
     public StationNetwork FindStationNetworkBy(Station station)
     {
-        foreach (var stationNetwork in stationNetworks)
+        //foreach (var stationNetwork in stationNetworks)
+        //{
+        //    if (stationNetwork.getStation().getName().Equals(station.getName()))
+        //    {
+        //        return stationNetwork;
+        //    }
+        //}
+
+        //return null;
+        ListNode<StationNetwork> currentNode = stationNetworks.head;
+
+        while (currentNode != null)
         {
+            StationNetwork stationNetwork = currentNode.Value;
+
             if (stationNetwork.getStation().getName().Equals(station.getName()))
             {
                 return stationNetwork;
             }
+
+            currentNode = currentNode.Next;
         }
 
         return null;
@@ -116,33 +131,74 @@ public class ZoneOneGraph:ZoneOneGraphInterface
         }
         return null;
     }
-    
+
+    //public Network GetNetworkInAStationNetwork(Station source, Station dest, string line)
+    //{
+    //    //find station network by station
+    //    var stationNetwork = FindStationNetworkBy(source);
+    //    //fetch all the destination stations on each edges
+    //    if (stationNetwork != null)
+    //    {
+    //        foreach (var network in stationNetwork.getNetworks())
+    //        {
+    //           if (network.getSourceStation() == source && network.getDestinationStation() == dest && network.getLine() == line)
+    //           {
+    //               return network;
+    //           } 
+    //        }
+    //    }
+    //    return null;
+    //}
+
     public Network GetNetworkInAStationNetwork(Station source, Station dest, string line)
     {
-        //find station network by station
         var stationNetwork = FindStationNetworkBy(source);
-        //fetch all the destination stations on each edges
+
         if (stationNetwork != null)
         {
-            foreach (var network in stationNetwork.getNetworks())
+            ListNode<Network> currentNode = stationNetwork.getNetworks().head;
+
+            while (currentNode != null)
             {
-               if (network.getSourceStation() == source && network.getDestinationStation() == dest && network.getLine() == line)
-               {
-                   return network;
-               } 
+                Network network = currentNode.Value;
+
+                if (network.getSourceStation() == source && network.getDestinationStation() == dest && network.getLine() == line)
+                {
+                    return network;
+                }
+
+                currentNode = currentNode.Next;
             }
         }
+
         return null;
     }
+
+    //public int ComputeTotalTime(LinkedList<Network> networks)
+    //{
+    //    var total = 0;
+    //    foreach (var network in networks)
+    //    {
+    //        total += network.getTime();
+    //    }
+    //    return total;
+    //}
+
     public int ComputeTotalTime(LinkedList<Network> networks)
     {
         var total = 0;
-        foreach (var network in networks)
+        ListNode<Network> currentNode = networks.head;
+
+        while (currentNode != null)
         {
+            Network network = currentNode.Value;
             total += network.getTime();
+            currentNode = currentNode.Next;
         }
+
         return total;
     }
+
     public void RelaxEdge(Network network, int[] distToV, Network[] edgeToV, PriorityQueue<Station, int> priorityQueue)
     {
         Station sv = network.getSourceStation();
@@ -165,7 +221,7 @@ public class ZoneOneGraph:ZoneOneGraphInterface
     {
         for (int i = 0; i < stationNetworks.Count(); i++)
         {
-            if (stationNetworks.ElementAt(i).getStation().getName() == station.getName())
+            if (stationNetworks.ElementAt(i).Value.getStation().getName() == station.getName()) //rewrite statement
             {
                 return i;
             }
@@ -178,7 +234,7 @@ public class ZoneOneGraph:ZoneOneGraphInterface
         logger.LogAllStationNetworks(stationNetworks);
         for (int i = 0; i < stationNetworks.Count(); i++)
         {
-            if (stationNetworks.ElementAt(i).getStation().getName() == source.getName())
+            if (stationNetworks.ElementAt(i).Value.getStation().getName() == source.getName())
             {
                 distances[i] = 0;
             }
@@ -207,31 +263,105 @@ public class ZoneOneGraph:ZoneOneGraphInterface
         firstpath = secondpath;
         return firstpath;
     }
-    
+
+    //public LinkedList<LinkedList<Network>> GetAllPathFrom(Station source, Station dest)
+    //{
+    //    //using bfs to get the all (total distance and the networks) from one destination to another
+    //    var result = new LinkedList<LinkedList<Network>>();
+    //    var shortestresult = new LinkedList<Network>();
+    //    //get all paths from source to dest
+    //    var queue = new LinkedList<LinkedList<Network>>();
+    //    var networks = ConnectedNetworksToAStation(source);
+    //    foreach (var network in networks)
+    //    {
+    //        var list = new LinkedList<Network>();
+    //        list.AddLast(network);
+    //        queue.AddLast(list);
+    //    }
+
+    //    while (queue.Count() > 0)
+    //    {
+
+    //        //corrected code
+    //        ListNode<LinkedList<Network>> pathNode = queue.First();
+    //        LinkedList<Network> pathList = pathNode.Value;
+    //        ListNode<Network> lastNode = pathList.Last();
+    //        Network path = lastNode.Value;
+
+
+    //        //LinkedList<Network> pathList = queue.First(); //check if the cast works
+    //        //Network path = queue.First().Last(); //head and tail
+
+    //        queue.RemoveFirst();
+    //        var destinationNode = path.getDestinationStation();
+
+
+    //        if (destinationNode == dest)
+    //        {
+    //            shortestresult = ShortestBetweenTwoPaths(shortestresult, pathList);
+    //            result.AddLast(pathList);
+    //        }
+    //        else
+    //        {
+    //            //fetch all neighbors
+    //            var neighbornetworks = ConnectedNetworksToAStation(destinationNode);
+    //            if (neighbornetworks != null)
+    //            {
+    //                foreach (var network in neighbornetworks)
+    //                {
+    //                    if (network.getDestinationStation() != path.getSourceStation())
+    //                   {
+    //                        LinkedList<Network> newPathList = new LinkedList<Network>();
+    //                        foreach (var pNetwork in pathList)
+    //                        {
+
+    //                            newPathList.AddLast(pNetwork);
+    //                            Console.WriteLine($"WTnbreeee {pNetwork}");
+    //                        }
+    //                        Console.WriteLine("WTnbreeee");
+    //                        newPathList.AddLast(network);
+    //                        queue.AddLast(newPathList);
+    //                    }
+    //                }
+    //            }
+    //        }
+    //    }
+
+    //   logger.LogAllNetworkPaths(result);
+    //   logger.LogShortestPath(shortestresult);
+    //    return result;
+    //}
+
     public LinkedList<LinkedList<Network>> GetAllPathFrom(Station source, Station dest)
     {
-        //using bfs to get the all (total distance and the networks) from one destination to another
         var result = new LinkedList<LinkedList<Network>>();
         var shortestresult = new LinkedList<Network>();
-        //get all paths from source to dest
         var queue = new LinkedList<LinkedList<Network>>();
         var networks = ConnectedNetworksToAStation(source);
-        foreach (var network in networks)
+
+        var networksCount = networks.Count();
+        var networksIndex = 0;
+
+        while (networksIndex < networksCount)
         {
+            var network = networks.ElementAt(networksIndex);
             var list = new LinkedList<Network>();
-            list.AddLast(network);
+            list.AddLast(network.Value);
             queue.AddLast(list);
+
+            networksIndex++;
         }
-        
+
         while (queue.Count() > 0)
         {
-            LinkedList<Network> pathList = queue.First(); //head
-            Network path = queue.First().Last(); //head and tail
+            var pathNode = queue.First();
+            var pathList = pathNode.Value;
+            var lastNode = pathList.Last();
+            var path = lastNode.Value;
 
             queue.RemoveFirst();
             var destinationNode = path.getDestinationStation();
-           
-            
+
             if (destinationNode == dest)
             {
                 shortestresult = ShortestBetweenTwoPaths(shortestresult, pathList);
@@ -239,34 +369,41 @@ public class ZoneOneGraph:ZoneOneGraphInterface
             }
             else
             {
-                //fetch all neighbors
                 var neighbornetworks = ConnectedNetworksToAStation(destinationNode);
                 if (neighbornetworks != null)
                 {
-                    foreach (var network in neighbornetworks)
+                    var neighbornetworksCount = neighbornetworks.Count();
+                    var neighbornetworksIndex = 0;
+
+                    while (neighbornetworksIndex < neighbornetworksCount)
                     {
-                        if (network.getDestinationStation() != path.getSourceStation())
-                       {
-                            LinkedList<Network> newPathList = new LinkedList<Network>();
-                            foreach (var pNetwork in pathList)
+                        var network = neighbornetworks.ElementAt(neighbornetworksIndex);
+                        if (network.Value.getDestinationStation() != path.getSourceStation())
+                        {
+                            var newPathList = new LinkedList<Network>();
+                            var currentNode = pathList.head;
+
+                            while (currentNode != null)
                             {
-                               
-                                newPathList.AddLast(pNetwork);
-                                Console.WriteLine($"WTnbreeee {pNetwork}");
+                                newPathList.AddLast(currentNode.Value);
+                                currentNode = currentNode.Next;
                             }
-                            Console.WriteLine("WTnbreeee");
-                            newPathList.AddLast(network);
+
+                            newPathList.AddLast(network.Value);
                             queue.AddLast(newPathList);
                         }
+
+                        neighbornetworksIndex++;
                     }
                 }
             }
         }
-        
-       logger.LogAllNetworkPaths(result);
-       logger.LogShortestPath(shortestresult);
+
+        logger.LogAllNetworkPaths(result);
+        logger.LogShortestPath(shortestresult);
         return result;
     }
+
 
     public bool checkIfStationExist(string station)
     {
@@ -278,17 +415,31 @@ public class ZoneOneGraph:ZoneOneGraphInterface
 
         return false;
     }
-    
+
+    //public Station fetchStation(string sourcestation)
+    //{
+    //    foreach (var stationNetwork in stationNetworks)
+    //    {
+    //        if (stationNetwork.getStation().getName() == sourcestation)
+    //        {
+    //            return stationNetwork.getStation();
+    //        }
+    //    }
+
+    //    return null;
+    //}
+
     public Station fetchStation(string sourcestation)
     {
-        foreach (var stationNetwork in stationNetworks)
+        for (int i = 0; i < stationNetworks.Count(); i++)
         {
-            if (stationNetwork.getStation().getName() == sourcestation)
+            if (stationNetworks.ElementAt(i).Value.getStation().getName() == sourcestation)
             {
-                return stationNetwork.getStation();
+                return stationNetworks.ElementAt(i).Value.getStation();
             }
         }
 
         return null;
     }
+
 }

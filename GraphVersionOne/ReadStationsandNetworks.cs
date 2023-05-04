@@ -13,18 +13,57 @@ public class ReadStationsandNetworks
     }
 
 
+    //public LinkedList<Station> GetTheStations(string filepath)
+    //{
+    //    LinkedList<string[]> stringArray = read.Excel(filepath, 0);
+
+    //    LinkedList<Station> IndexOneItem = new LinkedList<Station>();
+
+    //    foreach (string[] stat in stringArray)
+    //    {
+    //        IndexOneItem.AddLast(new Station(stat[0]));
+    //    }
+    //    return IndexOneItem;
+    //}
+
     public LinkedList<Station> GetTheStations(string filepath)
     {
         LinkedList<string[]> stringArray = read.Excel(filepath, 0);
 
         LinkedList<Station> IndexOneItem = new LinkedList<Station>();
 
-        foreach (string[] stat in stringArray)
+        ListNode<string[]> node = stringArray.First();
+        while (node != null)
         {
+            string[] stat = node.Value;
             IndexOneItem.AddLast(new Station(stat[0]));
+
+            node = node.Next;
         }
+
         return IndexOneItem;
     }
+
+
+
+
+    //public LinkedList<Network> GetNetworks(string filepath)
+    //{
+    //    LinkedList<string[]> networkArray = read.Excel(filepath, 0);
+
+    //    LinkedList<Network> arrayNetwork = new LinkedList<Network>();
+
+    //    foreach (string[] network in networkArray)
+    //    {
+    //        if ((int.TryParse(network[3], out int stationDistance)))
+    //        {
+    //            arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], stationDistance));
+    //        }
+
+    //    }
+    //    return arrayNetwork;
+
+    //}
 
     public LinkedList<Network> GetNetworks(string filepath)
     {
@@ -32,16 +71,20 @@ public class ReadStationsandNetworks
 
         LinkedList<Network> arrayNetwork = new LinkedList<Network>();
 
-        foreach (string[] network in networkArray)
+        ListNode<string[]> node = networkArray.First();
+        while (node != null)
         {
-            if ((int.TryParse(network[3], out int stationDistance)))
+            string[] network = node.Value;
+            if (int.TryParse(network[3], out int stationDistance))
             {
                 arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], stationDistance));
             }
 
+            node = node.Next;
         }
-        return arrayNetwork;
 
+        return arrayNetwork;
     }
+
 }
 

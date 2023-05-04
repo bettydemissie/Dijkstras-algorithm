@@ -31,11 +31,23 @@ public class StationCreation
 
     }
 
+    //public void CreateStationNetwork(LinkedList<Network> arrayNetwork)
+    //{
+    //    foreach (Network network in arrayNetwork)
+    //    {
+    //        graph.AddNetworkToStationNetwork(network.getSourceStation(), network);
+    //    }
+    //}
+
     public void CreateStationNetwork(LinkedList<Network> arrayNetwork)
     {
-        foreach (Network network in arrayNetwork)
+        var networkNode = arrayNetwork.First();
+        while (networkNode != null)
         {
+            var network = networkNode.Value;
             graph.AddNetworkToStationNetwork(network.getSourceStation(), network);
+            networkNode = networkNode.Next;
         }
     }
+
 }

@@ -2,95 +2,206 @@ namespace GraphVersionOne;
 
 public class Logger
 {
+    //public void LogAllNetworks(LinkedList<Network> networks)
+    //{
+    //    foreach (var network in networks)
+    //    {
+    //        Console.WriteLine(network);
+    //    }
+    //}
+
     public void LogAllNetworks(LinkedList<Network> networks)
     {
-        foreach (var network in networks)
+        var node = networks.First();
+        while (node != null)
         {
+            var network = node.Value;
             Console.WriteLine(network);
+
+            node = node.Next;
         }
     }
+
     public void LogStation(Station station)
     { 
         Console.WriteLine(station);
         
     }
+    //public void LogAllStationNetworks(LinkedList<StationNetwork> stationNetworks)
+    //{
+    //    foreach (var stationNetwork in stationNetworks)
+    //    { 
+    //        Console.WriteLine($"__________Beginning of {stationNetwork.getStation().getName()} Station Network____");
+    //       Console.WriteLine(stationNetwork.getStation());
+    //       LogAllNetworks(stationNetwork.getNetworks());
+    //       Console.WriteLine($"__________End of {stationNetwork.getStation().getName()} Station Network____");
+    //       Console.WriteLine("");
+    //    }
+    //}
+
     public void LogAllStationNetworks(LinkedList<StationNetwork> stationNetworks)
     {
-        foreach (var stationNetwork in stationNetworks)
-        { 
+        var node = stationNetworks.First();
+        while (node != null)
+        {
+            var stationNetwork = node.Value;
             Console.WriteLine($"__________Beginning of {stationNetwork.getStation().getName()} Station Network____");
-           Console.WriteLine(stationNetwork.getStation());
-           LogAllNetworks(stationNetwork.getNetworks());
-           Console.WriteLine($"__________End of {stationNetwork.getStation().getName()} Station Network____");
-           Console.WriteLine("");
+            Console.WriteLine(stationNetwork.getStation());
+            LogAllNetworks(stationNetwork.getNetworks());
+            Console.WriteLine($"__________End of {stationNetwork.getStation().getName()} Station Network____");
+            Console.WriteLine("");
+
+            node = node.Next;
         }
     }
+
+    //public void LogAllNetworkPaths(LinkedList<LinkedList<Network>> networksLists)
+    //{ 
+    //    Console.WriteLine("_________RESULT________");
+    //    var number = 0;
+    //    foreach (var networks in networksLists)
+    //    {
+    //        var path = "";
+    //        number++;
+    //        path += $" {number}. ";
+    //        Network previousNetwork = null;
+    //        Network lastNetwork = networks.Last();
+    //        var routeNumber = 0;
+
+    //        foreach (var network in networks)
+    //        {
+    //            routeNumber++;
+    //            if (previousNetwork != null)
+    //            {   
+    //                path += $"\n({routeNumber}) Change:  {previousNetwork.getDestinationStation()} ({previousNetwork.getLine()}) to {network.getSourceStation()} ({network.getLine()})";
+    //            }
+    //            else
+    //            {    
+
+    //                previousNetwork = network;
+    //                path += $"\n({routeNumber}) Start:   {network.getSourceStation()} ({previousNetwork.getLine()})";
+    //            }
+
+    //            routeNumber++;
+    //            path += $" \n({routeNumber})          {network}";
+    //        }
+    //        routeNumber++;
+    //        path += $"\n({routeNumber}) End:     {lastNetwork.getDestinationStation()} ({lastNetwork.getLine()})";
+    //        Console.WriteLine(path);
+    //    }
+    //}
+
     public void LogAllNetworkPaths(LinkedList<LinkedList<Network>> networksLists)
-    { 
+    {
         Console.WriteLine("_________RESULT________");
         var number = 0;
-        foreach (var networks in networksLists)
+        var networksNode = networksLists.First();
+        while (networksNode != null)
         {
+            var networks = networksNode.Value;
             var path = "";
             number++;
             path += $" {number}. ";
             Network previousNetwork = null;
-            Network lastNetwork = networks.Last();
+            Network lastNetwork = networks.Last().Value;
             var routeNumber = 0;
-           
-            foreach (var network in networks)
+
+            var networkNode = networks.First();
+            while (networkNode != null)
             {
+                var network = networkNode.Value;
                 routeNumber++;
                 if (previousNetwork != null)
-                {   
+                {
                     path += $"\n({routeNumber}) Change:  {previousNetwork.getDestinationStation()} ({previousNetwork.getLine()}) to {network.getSourceStation()} ({network.getLine()})";
                 }
                 else
-                {    
-                  
+                {
                     previousNetwork = network;
                     path += $"\n({routeNumber}) Start:   {network.getSourceStation()} ({previousNetwork.getLine()})";
                 }
-                
+
                 routeNumber++;
                 path += $" \n({routeNumber})          {network}";
+
+                networkNode = networkNode.Next;
             }
+
             routeNumber++;
             path += $"\n({routeNumber}) End:     {lastNetwork.getDestinationStation()} ({lastNetwork.getLine()})";
             Console.WriteLine(path);
+
+            networksNode = networksNode.Next;
         }
     }
-    
+
+
+    //public void LogAllNetworkPath(LinkedList<Network> networks)
+    //{
+    //    var number = 0;
+    //    var path = "";
+    //    Network previousNetwork = null;
+    //        Network lastNetwork = networks.Last();
+    //        var routeNumber = 0;
+
+    //        foreach (var network in networks)
+    //        {
+    //            routeNumber++;
+    //            if (previousNetwork != null)
+    //            {   
+    //                path += $"\n({routeNumber}) Change:  {previousNetwork.getDestinationStation()} ({previousNetwork.getLine()}) to {network.getSourceStation()} ({network.getLine()})";
+    //                previousNetwork = network;
+    //            }
+    //            else
+    //            {    
+
+    //                previousNetwork = network;
+    //                path += $"({routeNumber}) Start:   {network.getSourceStation()} ({previousNetwork.getLine()})";
+    //            }
+
+    //            routeNumber++;
+    //            path += $" \n({routeNumber})          {network}";
+    //        }
+    //        routeNumber++;
+    //        path += $"\n({routeNumber}) End:     {lastNetwork.getDestinationStation()} ({lastNetwork.getLine()})";
+    //        Console.WriteLine(path);
+    //}
+
     public void LogAllNetworkPath(LinkedList<Network> networks)
     {
         var number = 0;
         var path = "";
         Network previousNetwork = null;
-            Network lastNetwork = networks.Last();
-            var routeNumber = 0;
-           
-            foreach (var network in networks)
-            {
-                routeNumber++;
-                if (previousNetwork != null)
-                {   
-                    path += $"\n({routeNumber}) Change:  {previousNetwork.getDestinationStation()} ({previousNetwork.getLine()}) to {network.getSourceStation()} ({network.getLine()})";
-                    previousNetwork = network;
-                }
-                else
-                {    
-                  
-                    previousNetwork = network;
-                    path += $"({routeNumber}) Start:   {network.getSourceStation()} ({previousNetwork.getLine()})";
-                }
-                
-                routeNumber++;
-                path += $" \n({routeNumber})          {network}";
-            }
+        Network lastNetwork = networks.Last().Value;
+        var routeNumber = 0;
+
+        var networkNode = networks.First();
+        while (networkNode != null)
+        {
+            var network = networkNode.Value;
             routeNumber++;
-            path += $"\n({routeNumber}) End:     {lastNetwork.getDestinationStation()} ({lastNetwork.getLine()})";
-            Console.WriteLine(path);
+            if (previousNetwork != null)
+            {
+                path += $"\n({routeNumber}) Change:  {previousNetwork.getDestinationStation()} ({previousNetwork.getLine()}) to {network.getSourceStation()} ({network.getLine()})";
+                previousNetwork = network;
+            }
+            else
+            {
+                previousNetwork = network;
+                path += $"({routeNumber}) Start:   {network.getSourceStation()} ({previousNetwork.getLine()})";
+            }
+
+            routeNumber++;
+            path += $" \n({routeNumber})          {network}";
+
+            networkNode = networkNode.Next;
+        }
+
+        routeNumber++;
+        path += $"\n({routeNumber}) End:     {lastNetwork.getDestinationStation()} ({lastNetwork.getLine()})";
+        Console.WriteLine(path);
     }
+
 
     public void LogStationNetwork(StationNetwork stationNetwork)
     {
@@ -102,19 +213,34 @@ public class Logger
     {
         Console.WriteLine($"{stationNetwork.getStation()} Station Created Successfully");
     }
-    
+
+    //public void LogShortestPath(LinkedList<Network> networkList)
+    //{
+    //    Console.WriteLine("__________Shortest Path__________");
+    //    var path = "";
+    //    foreach (var network in networkList)
+    //    {
+    //        path += $"{network}";
+
+    //    }
+    //    Console.WriteLine(path);
+    //}
+
     public void LogShortestPath(LinkedList<Network> networkList)
     {
         Console.WriteLine("__________Shortest Path__________");
         var path = "";
-        foreach (var network in networkList)
+        var networkNode = networkList.First();
+        while (networkNode != null)
         {
+            var network = networkNode.Value;
             path += $"{network}";
-            
+            networkNode = networkNode.Next;
         }
         Console.WriteLine(path);
     }
-    
+
+
     public void LogTotalDistance(int distance)
     {
         Console.WriteLine($"Total Journey Time: {distance} minutes");

@@ -17,17 +17,41 @@ public class GraphController
         logger = new Logger();
     }
 
+    //public void PrintAllDelayedRoutes()
+    //{
+    //    var delayedRouteExists = false;
+    //    foreach (var stationNetwork in graph.GetStationNetworks())
+    //    {
+    //        foreach (var network in stationNetwork.getNetworks())
+    //        {
+    //            if (network.isDelayed())
+    //            {
+    //                delayedRouteExists = true;
+    //                logger.LogDelayedNetwork(network);
+    //            }
+    //        }
+    //    }
+
+    //    if (!delayedRouteExists)
+    //    {
+    //        logger.LogNoDelayRoute();
+    //    }
+    //}
+
     public void PrintAllDelayedRoutes()
     {
         var delayedRouteExists = false;
-        foreach (var stationNetwork in graph.GetStationNetworks())
+        var stationNetworks = graph.GetStationNetworks();
+        for (int i = 0; i < stationNetworks.Count(); i++)
         {
-            foreach (var network in stationNetwork.getNetworks())
+            var networks = stationNetworks.ElementAt(i).Value.getNetworks();
+            for (int j = 0; j < networks.Count(); j++)
             {
-                if (network.isDelayed())
+                var network = networks.ElementAt(j);
+                if (network.Value.isDelayed())
                 {
                     delayedRouteExists = true;
-                    logger.LogDelayedNetwork(network);
+                    logger.LogDelayedNetwork(network.Value);
                 }
             }
         }
@@ -38,25 +62,51 @@ public class GraphController
         }
     }
 
+
+    //public void PrintAllClosedRoutes()
+    //{
+    //    var delayedClosedExists = false;
+    //    foreach (var stationNetwork in graph.GetStationNetworks())
+    //    {
+    //        foreach (var network in stationNetwork.getNetworks())
+    //        {
+    //            if (network.isNetworkClosed())
+    //            {
+    //                delayedClosedExists = true;
+    //                logger.LogCloseNetwork(network);
+    //            }
+    //        }
+    //    }
+    //    if (!delayedClosedExists)
+    //    {
+    //        logger.LogNoClosedRoute();
+    //    }
+    //}
+
     public void PrintAllClosedRoutes()
     {
-        var delayedClosedExists = false;
-        foreach (var stationNetwork in graph.GetStationNetworks())
+        var closedRouteExists = false;
+        var stationNetworks = graph.GetStationNetworks();
+        for (int i = 0; i < stationNetworks.Count(); i++)
         {
-            foreach (var network in stationNetwork.getNetworks())
+            var networks = stationNetworks.ElementAt(i).Value.getNetworks();
+            for (int j = 0; j < networks.Count(); j++)
             {
-                if (network.isNetworkClosed())
+                var network = networks.ElementAt(j);
+                if (network.Value.isNetworkClosed())
                 {
-                    delayedClosedExists = true;
-                    logger.LogCloseNetwork(network);
+                    closedRouteExists = true;
+                    logger.LogCloseNetwork(network.Value);
                 }
             }
         }
-        if (!delayedClosedExists)
+
+        if (!closedRouteExists)
         {
             logger.LogNoClosedRoute();
         }
     }
+
 
     public void FindFastestWalkingRoutes(string sourceStation, string destStation)
     {
@@ -125,52 +175,100 @@ public class GraphController
             logger.LogStationDoesNotExist(sourceStation);
         }
     }
+    //    private void djikstra(Station source, Station dest)
+    //    {
+    //        //an array to all distances of all vertices in the graph
+    //        int[] disToV = new int[graph.GetStationNetworks().Count()];
+    //        //initialize each value with infinity
+    //        graph.InitializeDistances(disToV, source);
+    //        //an array to store networks (edgeToV)
+    //        Network[] edgeToV = new Network[graph.GetStationNetworks().Count()];
+
+    //        //initialize a priority queue
+    //        PriorityQueue<Station, int> priorityQueue = new PriorityQueue<Station, int>();
+    //        priorityQueue.Enqueue(source,0);
+
+    //        while (priorityQueue.Count() > 0)
+    //        {
+    //            //get nearest station/vertex
+    //            var nearestStation = priorityQueue.Dequeue();
+
+    //            //fetch all neighbors
+    //            var neighbornetworks = graph.ConnectedNetworksToAStation(nearestStation);
+    //            if (neighbornetworks != null)
+    //            {
+    //                foreach (var network in neighbornetworks)
+    //                {
+    //                    //relax edge
+    //                    graph.RelaxEdge(network, disToV,edgeToV,priorityQueue);
+    //                }
+    //            }
+    //        }
+    //        //get the shortest distance
+    //        var dvindex = graph.GetIndexOfAStationFromList(dest);
+    //        int shortestdistance = disToV[dvindex];
+    //        //compute the paths
+    //        var paths =  new LinkedList<Network>();
+    //        Network destnetwork = edgeToV[dvindex];
+    //        paths.AddLast(destnetwork);
+    //        while (destnetwork.getSourceStation() != source)
+    //        {
+    //            var svindex = graph.GetIndexOfAStationFromList(destnetwork.getSourceStation());
+    //            Network network = edgeToV[svindex];
+    //            paths.AddFirst(network);
+    //            destnetwork = network;
+    //        }
+
+    //        logger.LogDestSourceStationsName(source.getName(), dest.getName());
+    //        logger.LogAllNetworkPath(paths);
+    //        logger.LogTotalDistance(shortestdistance);
+    //    }
+
     private void djikstra(Station source, Station dest)
     {
-        //an array to all distances of all vertices in the graph
-        int[] disToV = new int[graph.GetStationNetworks().Count()];
-        //initialize each value with infinity
-        graph.InitializeDistances(disToV, source);
-        //an array to store networks (edgeToV)
-        Network[] edgeToV = new Network[graph.GetStationNetworks().Count()];
-        
-        //initialize a priority queue
-        PriorityQueue<Station, int> priorityQueue = new PriorityQueue<Station, int>();
-        priorityQueue.Enqueue(source,0);
+        int stationCount = graph.GetStationNetworks().Count();
 
-        while (priorityQueue.Count() > 0)
+        int[] disToV = new int[stationCount];
+        graph.InitializeDistances(disToV, source);
+
+        Network[] edgeToV = new Network[stationCount];
+
+        PriorityQueue<Station, int> priorityQueue = new PriorityQueue<Station, int>();
+        priorityQueue.Enqueue(source, 0);
+
+        while (!priorityQueue.IsEmpty())
         {
-            //get nearest station/vertex
             var nearestStation = priorityQueue.Dequeue();
-            
-            //fetch all neighbors
-            var neighbornetworks = graph.ConnectedNetworksToAStation(nearestStation);
+
+            var neighbornetworks = graph.ConnectedNetworksToAStation(nearestStation.Element);
             if (neighbornetworks != null)
             {
-                foreach (var network in neighbornetworks)
+                for (int i = 0; i < neighbornetworks.Count(); i++)
                 {
-                    //relax edge
-                    graph.RelaxEdge(network, disToV,edgeToV,priorityQueue);
+                    var network = neighbornetworks.ElementAt(i);
+                    graph.RelaxEdge(network.Value, disToV, edgeToV, priorityQueue);
                 }
             }
         }
-        //get the shortest distance
-        var dvindex = graph.GetIndexOfAStationFromList(dest);
-        int shortestdistance = disToV[dvindex];
-        //compute the paths
-        var paths =  new LinkedList<Network>();
-        Network destnetwork = edgeToV[dvindex];
-        paths.AddLast(destnetwork);
-        while (destnetwork.getSourceStation() != source)
+
+        int destIndex = graph.GetIndexOfAStationFromList(dest);
+        int shortestDistance = disToV[destIndex];
+
+        var paths = new LinkedList<Network>();
+        Network destNetwork = edgeToV[destIndex];
+        paths.AddLast(destNetwork);
+
+        while (destNetwork.getSourceStation() != source)
         {
-            var svindex = graph.GetIndexOfAStationFromList(destnetwork.getSourceStation());
-            Network network = edgeToV[svindex];
+            int sourceIndex = graph.GetIndexOfAStationFromList(destNetwork.getSourceStation());
+            Network network = edgeToV[sourceIndex];
             paths.AddFirst(network);
-            destnetwork = network;
+            destNetwork = network;
         }
-        
+
         logger.LogDestSourceStationsName(source.getName(), dest.getName());
         logger.LogAllNetworkPath(paths);
-        logger.LogTotalDistance(shortestdistance);
+        logger.LogTotalDistance(shortestDistance);
     }
+
 }
