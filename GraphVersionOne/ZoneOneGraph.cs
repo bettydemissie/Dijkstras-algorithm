@@ -429,13 +429,13 @@ public class ZoneOneGraph:ZoneOneGraphInterface
     //    return null;
     //}
 
-    public Station fetchStation(string sourcestation)
+    public StationNetwork fetchStation(string sourceStation)
     {
         for (int i = 0; i < stationNetworks.Count(); i++)
         {
-            if (stationNetworks.ElementAt(i).Value.getStation().getName() == sourcestation)
+            if (stationNetworks.ElementAt(i).Value.getStation().getName() == sourceStation)
             {
-                return stationNetworks.ElementAt(i).Value.getStation();
+                return stationNetworks.ElementAt(i).Value;
             }
         }
 

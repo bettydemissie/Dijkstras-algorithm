@@ -11,11 +11,11 @@ public class GraphController
         logger = new Logger();
     }
 
-    public GraphController()
-    {
-        this.graph = graph;
-        logger = new Logger();
-    }
+    //public GraphController()
+    //{
+    //    this.graph = graph;
+    //    logger = new Logger();
+    //}
 
     //public void PrintAllDelayedRoutes()
     //{
@@ -111,8 +111,8 @@ public class GraphController
     public void FindFastestWalkingRoutes(string sourceStation, string destStation)
     {
         //added to check if grapgh
-        var source = graph.fetchStation(sourceStation);
-        var dest = graph.fetchStation(destStation);
+        var source = graph.fetchStation(sourceStation).getStation();
+        var dest = graph.fetchStation(destStation).getStation();
         if (source != null && dest != null)
         {
             djikstra(source,dest);
@@ -125,8 +125,8 @@ public class GraphController
     
     public void AddDelayToNetwork(string sourceStation, string destStation, string line, int delay)
     {
-        var source = graph?.fetchStation(sourceStation);
-        var dest = graph?.fetchStation(destStation);
+        var source = graph?.fetchStation(sourceStation).getStation();
+        var dest = graph?.fetchStation(destStation).getStation();
         if (source != null  && dest != null)
         {
             var firstNetwork = graph.GetNetworkInAStationNetwork(source, dest, line);
@@ -145,8 +145,8 @@ public class GraphController
     
     public void OpenOrCloseStationsNetwork(string sourceStation, string destStation, string line, string reason, bool closeStatus)
     {
-        var source = graph.fetchStation(sourceStation);
-        var dest = graph.fetchStation(destStation);
+        var source = graph.fetchStation(sourceStation).getStation();
+        var dest = graph.fetchStation(destStation).getStation();
         if (source != null  && dest != null)
         {
             var firstNetwork = graph.GetNetworkInAStationNetwork(source, dest, line);
@@ -165,7 +165,7 @@ public class GraphController
     public void DisplayTubeInformation(string sourceStation)
     {
         //validation check
-        var source = graph.fetchStation(sourceStation);
+        var source = graph.fetchStation(sourceStation).getStation();
         if (source != null)
         {
             logger.LogStation(source);
@@ -258,7 +258,7 @@ public class GraphController
         Network destNetwork = edgeToV[destIndex];
         paths.AddLast(destNetwork);
 
-        while (destNetwork.getSourceStation() != source)
+        while (destNetwork.getSourceStation().getName() != source.getName())
         {
             int sourceIndex = graph.GetIndexOfAStationFromList(destNetwork.getSourceStation());
             Network network = edgeToV[sourceIndex];

@@ -4,6 +4,7 @@ public class GraphController
 {
     private ZoneOneGraphInterface graph;
     private Logger logger;
+
     public GraphController(ZoneOneGraphInterface zoneOneGraph)
     {
         this.graph = zoneOneGraph;

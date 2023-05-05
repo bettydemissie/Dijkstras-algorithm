@@ -2,13 +2,6 @@ namespace GraphVersionOne;
 
 public class Logger
 {
-    //public void LogAllNetworks(LinkedList<Network> networks)
-    //{
-    //    foreach (var network in networks)
-    //    {
-    //        Console.WriteLine(network);
-    //    }
-    //}
 
     public void LogAllNetworks(LinkedList<Network> networks)
     {
@@ -27,17 +20,6 @@ public class Logger
         Console.WriteLine(station);
         
     }
-    //public void LogAllStationNetworks(LinkedList<StationNetwork> stationNetworks)
-    //{
-    //    foreach (var stationNetwork in stationNetworks)
-    //    { 
-    //        Console.WriteLine($"__________Beginning of {stationNetwork.getStation().getName()} Station Network____");
-    //       Console.WriteLine(stationNetwork.getStation());
-    //       LogAllNetworks(stationNetwork.getNetworks());
-    //       Console.WriteLine($"__________End of {stationNetwork.getStation().getName()} Station Network____");
-    //       Console.WriteLine("");
-    //    }
-    //}
 
     public void LogAllStationNetworks(LinkedList<StationNetwork> stationNetworks)
     {
@@ -213,18 +195,6 @@ public class Logger
     {
         Console.WriteLine($"{stationNetwork.getStation()} Station Created Successfully");
     }
-
-    //public void LogShortestPath(LinkedList<Network> networkList)
-    //{
-    //    Console.WriteLine("__________Shortest Path__________");
-    //    var path = "";
-    //    foreach (var network in networkList)
-    //    {
-    //        path += $"{network}";
-
-    //    }
-    //    Console.WriteLine(path);
-    //}
 
     public void LogShortestPath(LinkedList<Network> networkList)
     {

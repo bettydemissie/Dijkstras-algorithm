@@ -18,7 +18,7 @@ public interface ZoneOneGraphInterface
     public int GetIndexOfAStationFromList(Station station);
     public void InitializeDistances(int[] distances, Station source);
     public bool checkIfStationExist(string station);
-    public Station fetchStation(string sourcestation);
+    public StationNetwork fetchStation(string sourcestation);
 }
 
 
