@@ -25,7 +25,6 @@ namespace Testing
 
             //create station network
             CreateStationNetwork(networks);
-            Console.WriteLine("BREAK!!!!!!!!!");
 
             controller = new GraphController(graph);
         }
