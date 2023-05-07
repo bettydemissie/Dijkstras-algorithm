@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ConsoleApp3
+namespace GraphVersionThree
 {
 	public class Menu
 	{
@@ -28,9 +28,7 @@ namespace ConsoleApp3
             logger.Log("\n");
             logger.Log("   Please enter your choice: ");
 
-
-            //perform necessary checks for input
-            int option = Convert.ToInt32(Console.ReadLine());
+            int option = int.TryParse(Console.ReadLine(), out int inputValue) ? inputValue : -1;
 
             switch (option)
             {

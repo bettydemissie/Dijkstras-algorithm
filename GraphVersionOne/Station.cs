@@ -12,15 +12,13 @@ public class Station:AccessStatus
     private string name;                          // name                      
     private AccessStatus.ACCESS StationAccess;   // access method
     private int TravelZone;                      // Travel Zone its on
-    private AccessStatus.STATUS StationStatus;   // open or closed
 
 
-    public Station(string name, int TravelZone, ACCESS StationAccess, AccessStatus.STATUS StationStatus)
+    public Station(string name, int TravelZone, ACCESS StationAccess)
     {
         this.StationID = SID++;
         this.name = name;
         this.StationAccess = StationAccess;
-        this.StationStatus = StationStatus;
         this.TravelZone = 1;
     }
 
@@ -32,7 +30,6 @@ public class Station:AccessStatus
         this.name = name;
         StationAccess = AccessStatus.ACCESS.Lift;
         TravelZone = 1;
-        StationStatus = AccessStatus.STATUS.Open;
 
     }
 
@@ -61,14 +58,10 @@ public class Station:AccessStatus
         return StationAccess;
     }
 
-    public AccessStatus.STATUS GetStationStatus()
-    {
-        return StationStatus;
-    }
 
-    public void SetStationStatus(AccessStatus.STATUS status)
+    public void SetStationAccess(AccessStatus.ACCESS StationAccess)
     {
-        StationStatus = status;
+        this.StationAccess = StationAccess;
     }
 
     public string getName()
@@ -78,6 +71,6 @@ public class Station:AccessStatus
 
     public override string ToString()
     {
-        return $"Station Name: {name} | Station ID: {StationID} | Station Access: {StationAccess} | Travel Zone: {TravelZone} | Station Status: {StationStatus}";
+        return $"Station Name: {name} | Station ID: {StationID} | Station Access: {StationAccess} | Travel Zone: {TravelZone}";
     }
 }

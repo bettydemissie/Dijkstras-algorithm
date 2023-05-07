@@ -12,20 +12,6 @@ public class ReadStationsandNetworks
         this.read = read;
     }
 
-
-    //public LinkedList<Station> GetTheStations(string filepath)
-    //{
-    //    LinkedList<string[]> stringArray = read.Excel(filepath, 0);
-
-    //    LinkedList<Station> IndexOneItem = new LinkedList<Station>();
-
-    //    foreach (string[] stat in stringArray)
-    //    {
-    //        IndexOneItem.AddLast(new Station(stat[0]));
-    //    }
-    //    return IndexOneItem;
-    //}
-
     public LinkedList<Station> GetTheStations(string filepath)
     {
         LinkedList<string[]> stringArray = read.Excel(filepath, 0);
@@ -63,54 +49,6 @@ public class ReadStationsandNetworks
     //    }
     //    return arrayNetwork;
 
-    //}
-
-    //public LinkedList<Network> GetNetworks(string filepath)
-    //{
-    //    LinkedList<string[]> networkArray = read.Excel(filepath, 0);
-
-    //    LinkedList<Network> arrayNetwork = new LinkedList<Network>();
-
-    //    ListNode<string[]> node = networkArray.First();
-    //    while (node != null)
-    //    {
-    //        string[] network = node.Value;
-    //        if (int.TryParse(network[3], out int stationDistance))
-    //        {
-    //            arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], stationDistance));
-    //        }
-
-    //        node = node.Next;
-    //    }
-
-    //    return arrayNetwork;
-    //}
-
-    //public LinkedList<Network> GetNetworks(string filepath, string Stationfilepath)
-    //{
-    //    LinkedList<string[]> networkArray = read.Excel(filepath, 0);
-    //    LinkedList<Station> stationList = GetTheStations(Stationfilepath); // Get the list of Station objects
-
-    //    LinkedList<Network> arrayNetwork = new LinkedList<Network>();
-
-    //    ListNode<string[]> node = networkArray.First();
-    //    while (node != null)
-    //    {
-    //        string[] network = node.Value;
-    //        if (int.TryParse(network[3], out int stationDistance))
-    //        {
-    //            //// Find the source and destination Station objects in the stationList
-    //            Station sourceStation = stationList.FirstOrDefault(s => s.name == network[0]);
-    //            Station destinationStation = stationList.FirstOrDefault(s => s.name == network[1]);
-
-    //            // Create the Network object using the source and destination Station objects
-    //            arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], stationDistance));
-    //        }
-
-    //        node = node.Next;
-    //    }
-
-    //    return arrayNetwork;
     //}
 
     public LinkedList<Network> GetNetworks(string filepath)

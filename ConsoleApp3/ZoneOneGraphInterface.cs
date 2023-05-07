@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace ConsoleApp3;
+namespace GraphVersionThree;
 
 public interface ZoneOneGraphInterface
 {
@@ -20,9 +20,3 @@ public interface ZoneOneGraphInterface
     public bool checkIfStationExist(string station);
     public StationNetwork fetchStation(string sourcestation);
 }
-
-
-//Baker Staion Network
-
-
-

@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace ConsoleApp3;
+namespace GraphVersionThree;
 
 public class ZoneOneGraph:ZoneOneGraphInterface
 {
@@ -28,18 +28,19 @@ public class ZoneOneGraph:ZoneOneGraphInterface
     public void CreateStationNetwork(Station station)
     {
         //if station network doesnt exist
-        //-create station network
+        //create station network
         //initialize a list
         LinkedList<Network> networks = new LinkedList<Network>();
         var stationNetwork = new StationNetwork(station, networks);
         AddStationNetworkToList(stationNetwork);
+
         //log new created station network
       logger.LogNewlyCreatedStationNetworkWithoutNetwork(stationNetwork);
     }
     public void CreateStationNetwork(Station station, Network network)
     {
         //if station network doesnt exist
-        //-create station network
+        //create station network
         //initialize a list
         LinkedList<Network> networks = new LinkedList<Network>();
         var stationNetwork = new StationNetwork(station, networks);
@@ -59,7 +60,7 @@ public class ZoneOneGraph:ZoneOneGraphInterface
         //if stationnetwork exist
         //add the network to it //  B-G
         //if it doesnt exist       B -> B-G
-        ////            G -> G-B
+        //            G -> G-B
         //create station network and add the network to it
         var firstStationNetwork = FindStationNetworkBy(sourceStation);
         var secondStationNetwork = FindStationNetworkBy(network.getDestinationStation());
@@ -188,7 +189,7 @@ public class ZoneOneGraph:ZoneOneGraphInterface
             }
         }
     }
-    LinkedList<Network> ShortestBetweenTwoPaths(LinkedList<Network> firstpath, LinkedList<Network> secondpath)
+    public LinkedList<Network> ShortestBetweenTwoPaths(LinkedList<Network> firstpath, LinkedList<Network> secondpath)
     {
         int distance = ComputeTotalTime(secondpath);
         Console.WriteLine(distance);
@@ -264,7 +265,7 @@ public class ZoneOneGraph:ZoneOneGraphInterface
         
        logger.LogAllNetworkPaths(result);
        logger.LogShortestPath(shortestresult);
-        return result;
+       return result;
     }
 
     public bool checkIfStationExist(string station)
@@ -290,6 +291,4 @@ public class ZoneOneGraph:ZoneOneGraphInterface
 
         return null;
     }
-
-    
 }

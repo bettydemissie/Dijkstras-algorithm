@@ -1,4 +1,4 @@
-namespace ConsoleApp3;
+namespace GraphVersionThree;
 
 public class Network
 {
@@ -77,6 +77,5 @@ public class Network
     {
         return delay != 0;
     }
-
 }
 

@@ -1,61 +1,28 @@
-namespace ConsoleApp3;
-
-//public class Station
-//{
-//    private string name;
-
-//    public Station(string name)
-//    {
-//        this.name = name;
-
-//    }
-
-//    public override string ToString()
-//    {
-//        return
-//            $"{name}";
-//    }
-
-//    public string getName()
-//    {
-//        return name;
-//    }
-//}
+namespace GraphVersionThree;
 
 public class Station : AccessStatus
 {
     private static int SID = 0;
     private int StationID;                       // a unique ID number 
-    private string name;                          // name                      
-    //consider removing since this is implemented in the Network class
-    //private string TubeLine;                     // TubeLine
+    private string name;                          // name          
     private AccessStatus.ACCESS StationAccess;   // access method
     private int TravelZone;                      // Travel Zone its on
-    private AccessStatus.STATUS StationStatus;   // open or closed
 
-
-    public Station(string name, int TravelZone)//AccessStatus.ACCESS StationAccess, int TravelZone, AccessStatus.STATUS StationStatus
+    public Station(string name, int TravelZone, AccessStatus.ACCESS StationAccess)
     {
         this.StationID = SID++;
         this.name = name;
-        //this.TubeLine = TubeLine;
         this.StationAccess = StationAccess;
         this.TravelZone = 1;
-        this.StationStatus = StationStatus;
 
     }
 
-
-    //initialised constructor for the current tests, will delete when other parameters
-    //in this constructor is initialised in Station implementation
     public Station(string name)
     {
         this.StationID = SID++;
         this.name = name;
-        //TubeLine = "";
         StationAccess = AccessStatus.ACCESS.Lift;
         TravelZone = 1;
-        StationStatus = AccessStatus.STATUS.Open;
 
     }
 
@@ -79,15 +46,16 @@ public class Station : AccessStatus
         return TravelZone;
     }
 
-    //public void setTubeLine(string TubeLine)
-    //{
-    //    this.TubeLine = TubeLine;
-    //}
+    public AccessStatus.ACCESS GetStationAccess()
+    {
+        return StationAccess;
+    }
 
-    //public string getTubeLine()
-    //{
-    //    return TubeLine;
-    //}
+
+    public void SetStationAccess(AccessStatus.ACCESS StationAccess)
+    {
+        this.StationAccess = StationAccess;
+    }
 
     public string getName()
     {
@@ -96,11 +64,7 @@ public class Station : AccessStatus
 
     public override string ToString()
     {
-        return
-            $"Station Name: {name} |" +
-            $"Station ID: {StationID.ToString()} |" +
-            $"Station Access: {StationAccess.ToString()} |" +
-            $"Travel Zone: {TravelZone.ToString()} |" +
-            $"Station Status: {StationStatus.ToString()} |";
+        return $"Station Name: {name} | Station ID: {StationID} | Station Access: {StationAccess} | Travel Zone: {TravelZone}";
+
     }
 }

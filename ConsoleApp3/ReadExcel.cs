@@ -4,7 +4,7 @@ using System.IO;
 using OfficeOpenXml;
 using System.Text;
 
-namespace ConsoleApp3
+namespace GraphVersionThree
 {
 
 	public class ReadExcel
@@ -38,7 +38,6 @@ namespace ConsoleApp3
                 Console.WriteLine("Cell values:");
 
                 string[] arrayOfStation = new string[worksheet.Dimension.Rows * worksheet.Dimension.Columns];
-                int index = 0;
 
                 for (int row = 1; row <= worksheet.Dimension.Rows; row++)
                 {
@@ -49,46 +48,11 @@ namespace ConsoleApp3
                             rowValues[col - 1] = cell;
                         }
                         items.AddLast(rowValues);
-
                 }
             }
             return items;
         }
 
-        public string ReadCell(int i, int j)
-        {
-            //increment b/c cell starts from 1,1
-            i++;
-            j++; 
-
-            var cell = worksheet.Cells[i, j].GetValue<string>();
-            //if value in cell is not null return
-            Console.WriteLine(cell);
-            if (cell != null)
-            {
-                //if value in cell is not null return
-                return cell.ToString();
-            }
-            else
-            {
-                //if value in cell is null return nothing
-                return "";
-            }
-        }
-
-        public void Get2DList()
-        {
-            foreach (string[] stringArray in items)
-            {
-                foreach (string str in stringArray)
-                {
-                    Console.Write(str + " ");
-
-                }
-                Console.WriteLine();
-            }
-            
-        }
     }
 }
 

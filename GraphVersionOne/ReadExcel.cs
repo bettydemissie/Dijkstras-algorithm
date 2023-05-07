@@ -56,28 +56,6 @@ namespace GraphVersionOne
             }
             return items;
         }
-
-        public string ReadCell(int i, int j)
-        {
-            //increment b/c cell starts from 1,1
-            i++;
-            j++;
-
-            var cell = worksheet.Cells[i, j].GetValue<string>();
-            //if value in cell is not null return
-            Console.WriteLine(cell);
-            if (cell != null)
-            {
-                //if value in cell is not null return
-                return cell.ToString();
-            }
-            else
-            {
-                //if value in cell is null return nothing
-                return "";
-            }
-        }
-
     }
 }
 

@@ -32,14 +32,6 @@ public class StationCreation
 
     }
 
-    //public void CreateStationNetwork(LinkedList<Network> arrayNetwork)
-    //{
-    //    foreach (Network network in arrayNetwork)
-    //    {
-    //        graph.AddNetworkToStationNetwork(network.getSourceStation(), network);
-    //    }
-    //}
-
     public void CreateStationNetwork(LinkedList<Network> arrayNetwork)
     {
         var networkNode = arrayNetwork.First();

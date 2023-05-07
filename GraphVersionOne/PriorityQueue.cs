@@ -2,63 +2,6 @@
 
 namespace GraphVersionOne;
 
-//public class PriorityQueue
-//{
-//    //priority queue is a type of linked list
-//    private LinkedList<T> queue;
-
-//    public PriorityQueue()
-//    {
-//        queue = new LinkedList<T>();
-//    }
-
-//    public void Enqueue(Station station, int distance)
-//    {
-//        PriorityQueueNode newNode = new PriorityQueueNode(station, distance);
-
-//        if (queue.isEmpty() || distance <= queue.getHead().getData().index)
-//        {
-//            queue.AddFirst(newNode);
-//        }
-//        else
-//        {
-//            ListNode<T> current = queue.getHead();
-
-//            while (current.getNext() != null && current.getNext().getData().index < distance)
-//            {
-//                current = current.getNext();
-//            }
-
-//            PriorityQueueNode newCurrent = new PriorityQueueNode(current);
-
-//            queue.insertAfter(newNode, newCurrent);
-//        }
-//    }
-
-//    public PriorityQueueNode Dequeue()
-//    {
-//        if (queue.isEmpty())
-//        {
-//            throw new InvalidOperationException("Queue is empty.");
-//        }
-
-//        PriorityQueueNode result = queue.getHead().getData();
-//        queue.removeAtHead();
-//        return result;
-//    }
-
-//    public bool IsEmpty()
-//    {
-//        return queue.isEmpty();
-//    }
-
-//    public void PrintQueue()
-//    {
-
-//        queue.printList();
-//    }
-//}
-
 public class PriorityQueue<TElement, TPriority>
 {
     private LinkedList<PriorityQueueNode<TElement, TPriority>> queue;

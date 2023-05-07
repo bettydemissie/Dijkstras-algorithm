@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ConsoleApp3
+namespace GraphVersionThree
 {
 	public class MenuOptions
 	{

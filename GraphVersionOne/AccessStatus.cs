@@ -1,16 +1,13 @@
 ﻿using System;
 namespace GraphVersionOne
 {
-    // Enumeration types for tube Staion access & status
+    // Enumeration types for tube Staion access
 
     //code referenced from Week1 tutorial solution
 
     public interface AccessStatus
     {
         enum ACCESS { Stairs, Lift, Escalator };    // Station Accesses
-
-        enum STATUS { Open, Closed };               // Station Status
-
     }
 }
 

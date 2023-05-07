@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ConsoleApp3
+namespace GraphVersionThree
 {
 	public class StationCreation
 	{
@@ -18,20 +18,12 @@ namespace ConsoleApp3
             //string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
             //string filepathstations = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
 
-            var stations = text.GetTheStations(filepathstations);
-
+            //create network
             var networks = text.GetNetworks(filepath);
-
-            //foreach (Network item in networks)
-            //{
-            //    Console.WriteLine(item);
-
-            //}
 
             Console.WriteLine("\n");
 
             //create station network
-
             CreateStationNetwork(networks);
             Console.WriteLine("BREAK!!!!!!!!!");
 
@@ -43,13 +35,12 @@ namespace ConsoleApp3
 
         public void CreateStationNetwork(LinkedList<Network> arrayNetwork)
         {
-
+            
             foreach (Network network in arrayNetwork)
             {
                 graph.AddNetworkToStationNetwork(network.getSourceStation(), network);
             }
 
-            
         }
     }
 }

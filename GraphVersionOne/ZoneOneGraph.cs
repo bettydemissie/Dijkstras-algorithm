@@ -93,15 +93,6 @@ public class ZoneOneGraph:ZoneOneGraphInterface
     }
     public StationNetwork FindStationNetworkBy(Station station)
     {
-        //foreach (var stationNetwork in stationNetworks)
-        //{
-        //    if (stationNetwork.getStation().getName().Equals(station.getName()))
-        //    {
-        //        return stationNetwork;
-        //    }
-        //}
-
-        //return null;
         ListNode<StationNetwork> currentNode = stationNetworks.head;
 
         while (currentNode != null)
@@ -132,24 +123,6 @@ public class ZoneOneGraph:ZoneOneGraphInterface
         return null;
     }
 
-    //public Network GetNetworkInAStationNetwork(Station source, Station dest, string line)
-    //{
-    //    //find station network by station
-    //    var stationNetwork = FindStationNetworkBy(source);
-    //    //fetch all the destination stations on each edges
-    //    if (stationNetwork != null)
-    //    {
-    //        foreach (var network in stationNetwork.getNetworks())
-    //        {
-    //           if (network.getSourceStation() == source && network.getDestinationStation() == dest && network.getLine() == line)
-    //           {
-    //               return network;
-    //           } 
-    //        }
-    //    }
-    //    return null;
-    //}
-
     public Network GetNetworkInAStationNetwork(Station source, Station dest, string line)
     {
         var stationNetwork = FindStationNetworkBy(source);
@@ -173,16 +146,6 @@ public class ZoneOneGraph:ZoneOneGraphInterface
 
         return null;
     }
-
-    //public int ComputeTotalTime(LinkedList<Network> networks)
-    //{
-    //    var total = 0;
-    //    foreach (var network in networks)
-    //    {
-    //        total += network.getTime();
-    //    }
-    //    return total;
-    //}
 
     public int ComputeTotalTime(LinkedList<Network> networks)
     {
@@ -244,7 +207,8 @@ public class ZoneOneGraph:ZoneOneGraphInterface
             }
         }
     }
-    LinkedList<Network> ShortestBetweenTwoPaths(LinkedList<Network> firstpath, LinkedList<Network> secondpath)
+
+    public LinkedList<Network> ShortestBetweenTwoPaths(LinkedList<Network> firstpath, LinkedList<Network> secondpath)
     {
         int distance = ComputeTotalTime(secondpath);
         Console.WriteLine(distance);
@@ -263,74 +227,6 @@ public class ZoneOneGraph:ZoneOneGraphInterface
         firstpath = secondpath;
         return firstpath;
     }
-
-    //public LinkedList<LinkedList<Network>> GetAllPathFrom(Station source, Station dest)
-    //{
-    //    //using bfs to get the all (total distance and the networks) from one destination to another
-    //    var result = new LinkedList<LinkedList<Network>>();
-    //    var shortestresult = new LinkedList<Network>();
-    //    //get all paths from source to dest
-    //    var queue = new LinkedList<LinkedList<Network>>();
-    //    var networks = ConnectedNetworksToAStation(source);
-    //    foreach (var network in networks)
-    //    {
-    //        var list = new LinkedList<Network>();
-    //        list.AddLast(network);
-    //        queue.AddLast(list);
-    //    }
-
-    //    while (queue.Count() > 0)
-    //    {
-
-    //        //corrected code
-    //        ListNode<LinkedList<Network>> pathNode = queue.First();
-    //        LinkedList<Network> pathList = pathNode.Value;
-    //        ListNode<Network> lastNode = pathList.Last();
-    //        Network path = lastNode.Value;
-
-
-    //        //LinkedList<Network> pathList = queue.First(); //check if the cast works
-    //        //Network path = queue.First().Last(); //head and tail
-
-    //        queue.RemoveFirst();
-    //        var destinationNode = path.getDestinationStation();
-
-
-    //        if (destinationNode == dest)
-    //        {
-    //            shortestresult = ShortestBetweenTwoPaths(shortestresult, pathList);
-    //            result.AddLast(pathList);
-    //        }
-    //        else
-    //        {
-    //            //fetch all neighbors
-    //            var neighbornetworks = ConnectedNetworksToAStation(destinationNode);
-    //            if (neighbornetworks != null)
-    //            {
-    //                foreach (var network in neighbornetworks)
-    //                {
-    //                    if (network.getDestinationStation() != path.getSourceStation())
-    //                   {
-    //                        LinkedList<Network> newPathList = new LinkedList<Network>();
-    //                        foreach (var pNetwork in pathList)
-    //                        {
-
-    //                            newPathList.AddLast(pNetwork);
-    //                            Console.WriteLine($"WTnbreeee {pNetwork}");
-    //                        }
-    //                        Console.WriteLine("WTnbreeee");
-    //                        newPathList.AddLast(network);
-    //                        queue.AddLast(newPathList);
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
-
-    //   logger.LogAllNetworkPaths(result);
-    //   logger.LogShortestPath(shortestresult);
-    //    return result;
-    //}
 
     public LinkedList<LinkedList<Network>> GetAllPathFrom(Station source, Station dest)
     {
@@ -415,19 +311,6 @@ public class ZoneOneGraph:ZoneOneGraphInterface
 
         return false;
     }
-
-    //public Station fetchStation(string sourcestation)
-    //{
-    //    foreach (var stationNetwork in stationNetworks)
-    //    {
-    //        if (stationNetwork.getStation().getName() == sourcestation)
-    //        {
-    //            return stationNetwork.getStation();
-    //        }
-    //    }
-
-    //    return null;
-    //}
 
     public StationNetwork fetchStation(string sourceStation)
     {

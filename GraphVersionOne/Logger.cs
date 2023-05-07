@@ -37,42 +37,6 @@ public class Logger
         }
     }
 
-    //public void LogAllNetworkPaths(LinkedList<LinkedList<Network>> networksLists)
-    //{ 
-    //    Console.WriteLine("_________RESULT________");
-    //    var number = 0;
-    //    foreach (var networks in networksLists)
-    //    {
-    //        var path = "";
-    //        number++;
-    //        path += $" {number}. ";
-    //        Network previousNetwork = null;
-    //        Network lastNetwork = networks.Last();
-    //        var routeNumber = 0;
-
-    //        foreach (var network in networks)
-    //        {
-    //            routeNumber++;
-    //            if (previousNetwork != null)
-    //            {   
-    //                path += $"\n({routeNumber}) Change:  {previousNetwork.getDestinationStation()} ({previousNetwork.getLine()}) to {network.getSourceStation()} ({network.getLine()})";
-    //            }
-    //            else
-    //            {    
-
-    //                previousNetwork = network;
-    //                path += $"\n({routeNumber}) Start:   {network.getSourceStation()} ({previousNetwork.getLine()})";
-    //            }
-
-    //            routeNumber++;
-    //            path += $" \n({routeNumber})          {network}";
-    //        }
-    //        routeNumber++;
-    //        path += $"\n({routeNumber}) End:     {lastNetwork.getDestinationStation()} ({lastNetwork.getLine()})";
-    //        Console.WriteLine(path);
-    //    }
-    //}
-
     public void LogAllNetworkPaths(LinkedList<LinkedList<Network>> networksLists)
     {
         Console.WriteLine("_________RESULT________");
@@ -116,37 +80,6 @@ public class Logger
             networksNode = networksNode.Next;
         }
     }
-
-    //public void LogAllNetworkPath(LinkedList<Network> networks)
-    //{
-    //    var number = 0;
-    //    var path = "";
-    //    Network previousNetwork = null;
-    //        Network lastNetwork = networks.Last();
-    //        var routeNumber = 0;
-
-    //        foreach (var network in networks)
-    //        {
-    //            routeNumber++;
-    //            if (previousNetwork != null)
-    //            {   
-    //                path += $"\n({routeNumber}) Change:  {previousNetwork.getDestinationStation()} ({previousNetwork.getLine()}) to {network.getSourceStation()} ({network.getLine()})";
-    //                previousNetwork = network;
-    //            }
-    //            else
-    //            {    
-
-    //                previousNetwork = network;
-    //                path += $"({routeNumber}) Start:   {network.getSourceStation()} ({previousNetwork.getLine()})";
-    //            }
-
-    //            routeNumber++;
-    //            path += $" \n({routeNumber})          {network}";
-    //        }
-    //        routeNumber++;
-    //        path += $"\n({routeNumber}) End:     {lastNetwork.getDestinationStation()} ({lastNetwork.getLine()})";
-    //        Console.WriteLine(path);
-    //}
 
     public void LogAllNetworkPath(LinkedList<Network> networks)
     {

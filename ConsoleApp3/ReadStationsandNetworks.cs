@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Collections.Specialized.BitVector32;
 
-namespace ConsoleApp3
+namespace GraphVersionThree
 {
     public class ReadStationsandNetworks
     {
@@ -11,7 +11,6 @@ namespace ConsoleApp3
         {
             this.read = read;
         }
-
         
         public LinkedList<Station> GetTheStations(string filepath)
         {
@@ -21,10 +20,7 @@ namespace ConsoleApp3
 
             foreach (string[] stat in stringArray)
             {
-                
                  IndexOneItem.AddLast(new Station(stat[0]));
-                
-
             }
             return IndexOneItem;
         }
@@ -41,11 +37,8 @@ namespace ConsoleApp3
                 {
                     arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], stationDistance));
                 }
-                
             }
             return arrayNetwork;
-
         }
     }
 }
-

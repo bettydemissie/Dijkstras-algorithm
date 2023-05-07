@@ -1,15 +1,13 @@
 ﻿using System;
-namespace ConsoleApp3
+namespace GraphVersionThree
 {
-    // Enumeration types for tube Staion access & status
+    // Enumeration types for tube Staion access
 
     //code referenced from Week1 tutorial solution
 
-    interface AccessStatus
+    public interface AccessStatus
     {
         enum ACCESS { Stairs, Lift, Escalator };    // Station Accesses
-
-        enum STATUS { Open, Closed };               // Station Status
 
     }
 }

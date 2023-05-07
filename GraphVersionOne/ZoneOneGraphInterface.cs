@@ -1,5 +1,4 @@
 using System.Globalization;
-
 namespace GraphVersionOne;
 
 public interface ZoneOneGraphInterface
@@ -20,9 +19,3 @@ public interface ZoneOneGraphInterface
     public bool checkIfStationExist(string station);
     public StationNetwork fetchStation(string sourcestation);
 }
-
-
-//Baker Station Network
-
-
-

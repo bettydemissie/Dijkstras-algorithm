@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{7BDDCC2F-AF1D-4B16-815C-4D3A82441B89}|Default">
+﻿<Properties StartupConfiguration="{3BBF6804-2718-490A-AEF1-666DA2504123}|Default">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.GraphVersionOne PreferredExecutionTarget="MonoDevelop.Default" />
@@ -6,6 +6,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Testing FirstBuild="True" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GraphVersionOne/Menu.cs">
     <Files>
       <File FileName="ConsoleApp3/Station.cs" Line="105" Column="6" />
@@ -55,4 +56,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.GraphVersionThree PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
