@@ -40,7 +40,22 @@ namespace Testing
 
         }
 
-        public double RunTestForDijsktraVersion3()
+        //public double RunTestForDijsktraVersion3()
+        //{
+        //    var stopwatch = Stopwatch.StartNew();
+
+        //    // Code to benchmark goes here
+        //    controller.FindFastestWalkingRoutes("Baker Street", "Goodge Street");
+
+        //    // Stop timing
+        //    stopwatch.Stop();
+
+        //    // Print the elapsed time
+        //    //Console.WriteLine("Elapsed time for Dijsktra V3: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
+        //    return stopwatch.Elapsed.TotalMilliseconds;
+        //}
+
+        public double RunTestForDijsktraVersion3_1stEnquiry()
         {
             var stopwatch = Stopwatch.StartNew();
 
@@ -51,7 +66,82 @@ namespace Testing
             stopwatch.Stop();
 
             // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V3: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
+            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
+
+        public double RunTestForDijsktraVersion3_2ndEnquiry()
+        {
+            var stopwatch = Stopwatch.StartNew();
+
+            // Code to benchmark goes here
+            controller.FindFastestWalkingRoutes("Temple", "Lambeth North");
+
+            // Stop timing
+            stopwatch.Stop();
+
+            // Print the elapsed time
+            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
+
+        public double RunTestForDijsktraVersion3_3rdEnquiry()
+        {
+            var stopwatch = Stopwatch.StartNew();
+
+            // Code to benchmark goes here
+            controller.FindFastestWalkingRoutes("Green Park", "Liverpool Street");
+
+            // Stop timing
+            stopwatch.Stop();
+
+            // Print the elapsed time
+            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
+
+        public double RunTestForDijsktraVersion3_4thEnquiry()
+        {
+            var stopwatch = Stopwatch.StartNew();
+
+            // Code to benchmark goes here
+            controller.FindFastestWalkingRoutes("Marble Arch", "Cannon Street");
+
+            // Stop timing
+            stopwatch.Stop();
+
+            // Print the elapsed time
+            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
+
+        public double RunTestForDijsktraVersion3_5thEnquiry()
+        {
+            var stopwatch = Stopwatch.StartNew();
+
+            // Code to benchmark goes here
+            controller.FindFastestWalkingRoutes("London Bridge", "Marylebone");
+
+            // Stop timing
+            stopwatch.Stop();
+
+            // Print the elapsed time
+            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
+
+        public double RunTestForDijsktraVersion3_6thEnquiry()
+        {
+            var stopwatch = Stopwatch.StartNew();
+
+            // Code to benchmark goes here
+            controller.FindFastestWalkingRoutes("Paddington", "Tower Hill");
+
+            // Stop timing
+            stopwatch.Stop();
+
+            // Print the elapsed time
+            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
