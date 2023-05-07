@@ -979,7 +979,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
-      "projectName": "GraphVersionThree",
+      "projectName": "ConsoleApp3",
       "projectPath": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
       "packagesPath": "/Users/Ifeoma1/.nuget/packages/",
       "outputPath": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/",

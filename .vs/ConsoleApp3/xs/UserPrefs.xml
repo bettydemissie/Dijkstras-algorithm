@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{3BBF6804-2718-490A-AEF1-666DA2504123}|Default">
+﻿<Properties StartupConfiguration="{42C42D72-67AD-4688-91E3-3EFDD955AE60}|Default">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.GraphVersionOne PreferredExecutionTarget="MonoDevelop.Default" />
@@ -6,51 +6,56 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Testing FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GraphVersionOne/Menu.cs">
+  <MonoDevelop.Ide.ItemProperties.Testing PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GraphVersionOne/StationCreation.cs">
     <Files>
-      <File FileName="ConsoleApp3/Station.cs" Line="105" Column="6" />
-      <File FileName="ConsoleApp3/StationNetwork.cs" Line="2" Column="1" />
-      <File FileName="ConsoleApp3/GraphController.cs" Line="82" Column="13" />
-      <File FileName="ConsoleApp3/ZoneOneGraph.cs" Line="1" Column="1" />
-      <File FileName="ConsoleApp3/ZoneOneGraphInterface.cs" Line="1" Column="1" />
-      <File FileName="ConsoleApp3/Network.cs" Line="1" Column="1" />
-      <File FileName="ConsoleApp3/Logger.cs" Line="1" Column="1" />
-      <File FileName="ConsoleApp3/Program.cs" Line="8" Column="1" />
+      <File FileName="ConsoleApp3/Station.cs" Line="19" Column="1" />
+      <File FileName="ConsoleApp3/StationNetwork.cs" Line="1" Column="28" />
+      <File FileName="ConsoleApp3/GraphController.cs" Line="12" Column="6" />
+      <File FileName="ConsoleApp3/ZoneOneGraph.cs" Line="260" Column="11" />
+      <File FileName="ConsoleApp3/ZoneOneGraphInterface.cs" Line="22" Column="2" />
+      <File FileName="ConsoleApp3/Network.cs" Line="19" Column="19" />
+      <File FileName="ConsoleApp3/Logger.cs" Line="8" Column="10" />
+      <File FileName="ConsoleApp3/Program.cs" Line="7" Column="1" />
       <File FileName="GraphVersionOne/Network.cs" Line="34" Column="5" />
-      <File FileName="GraphVersionOne/Logger.cs" Line="38" Column="6" />
-      <File FileName="GraphVersionOne/GraphController.cs" Line="108" Column="6" />
-      <File FileName="GraphVersionOne/ZoneOneGraphInterface.cs" Line="26" Column="1" />
-      <File FileName="GraphVersionOne/ZoneOneGraph.cs" Line="88" Column="37" />
+      <File FileName="GraphVersionOne/Logger.cs" Line="88" Column="1" />
+      <File FileName="GraphVersionOne/GraphController.cs" Line="37" Column="1" />
+      <File FileName="GraphVersionOne/ZoneOneGraphInterface.cs" Line="21" Column="2" />
+      <File FileName="GraphVersionOne/ZoneOneGraph.cs" Line="328" Column="2" />
       <File FileName="GraphVersionOne/PriorityQueueNode.cs" Line="15" Column="1" />
-      <File FileName="GraphVersionOne/ReadExcel.cs" Line="79" Column="10" />
-      <File FileName="GraphVersionOne/ReadStationsandNetworks.cs" Line="169" Column="1" />
-      <File FileName="GraphVersionOne/Station.cs" Line="12" Column="80" />
-      <File FileName="GraphVersionOne/StationCreation.cs" Line="45" Column="48" />
+      <File FileName="GraphVersionOne/ReadExcel.cs" Line="58" Column="10" />
+      <File FileName="GraphVersionOne/ReadStationsandNetworks.cs" Line="13" Column="6" />
+      <File FileName="GraphVersionOne/Station.cs" Line="55" Column="1" />
+      <File FileName="GraphVersionOne/StationCreation.cs" Line="45" Column="1" />
       <File FileName="GraphVersionOne/StationNetwork.cs" Line="18" Column="1" />
       <File FileName="GraphVersionOne/ListNode&lt;T&gt;.cs" Line="4" Column="27" />
-      <File FileName="GraphVersionOne/LinkedList&lt;T&gt;.cs" Line="141" Column="20" />
-      <File FileName="GraphVersionOne/PriorityQueue.cs" Line="75" Column="1" />
-      <File FileName="GraphVersionOne/AccessStatus.cs" Line="2" Column="11" />
-      <File FileName="ConsoleApp3/Benchmarking.cs" Line="14" Column="1" />
-      <File FileName="ConsoleApp3/AccessStatus.cs" Line="13" Column="1" />
+      <File FileName="GraphVersionOne/LinkedList&lt;T&gt;.cs" Line="227" Column="10" />
+      <File FileName="GraphVersionOne/PriorityQueue.cs" Line="63" Column="1" />
+      <File FileName="GraphVersionOne/AccessStatus.cs" Line="13" Column="1" />
       <File FileName="GraphVersionOne/MenuOptions.cs" Line="85" Column="22" />
       <File FileName="GraphVersionOne/Menu.cs" Line="3" Column="1" />
-      <File FileName="GraphVersionOne/Program.cs" Line="7" Column="12" />
-      <File FileName="ConsoleApp3/ReadStationsandNetworks.cs" Line="1" Column="1" />
-      <File FileName="ConsoleApp3/StationCreation.cs" Line="37" Column="1" />
-      <File FileName="ConsoleApp3/ReadExcel.cs" Line="60" Column="49" />
-      <File FileName="ConsoleApp3/MenuOptions.cs" Line="77" Column="88" />
-      <File FileName="ConsoleApp3/Menu.cs" Line="15" Column="10" />
-      <File FileName="GraphVersionOne/Benchmarking.cs" Line="2" Column="26" />
-      <File FileName="Testing/Program.cs" Line="4" Column="3" />
+      <File FileName="GraphVersionOne/Program.cs" Line="6" Column="19" />
+      <File FileName="ConsoleApp3/ReadStationsandNetworks.cs" Line="12" Column="30" />
+      <File FileName="ConsoleApp3/StationCreation.cs" Line="19" Column="133" />
+      <File FileName="ConsoleApp3/ReadExcel.cs" Line="40" Column="110" />
+      <File FileName="ConsoleApp3/MenuOptions.cs" Line="21" Column="104" />
+      <File FileName="ConsoleApp3/Menu.cs" Line="35" Column="24" />
+      <File FileName="ConsoleApp3/AccessStatus.cs" Line="4" Column="48" />
+      <File FileName="Testing/Program.cs" Line="35" Column="76" />
+      <File FileName="Testing/ConsistencyTestV1.cs" Line="62" Column="10" />
+      <File FileName="Testing/ConsistencyTestV3.cs" Line="56" Column="59" />
+      <File FileName="Testing/BenchmarkingTestV1.cs" Line="131" Column="10" />
+      <File FileName="Testing/BenchmarkingTestV3.cs" Line="120" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ConsoleApp3" expanded="True">
-            <Node name="ConsoleApp3" expanded="True" />
-            <Node name="GraphVersionOne" expanded="True" />
+            <Node name="GraphVersionOne" expanded="True">
+              <Node name="StationCreation.cs" selected="True" />
+            </Node>
+            <Node name="GraphVersionThree" expanded="True" />
+            <Node name="Testing" expanded="True" />
           </Node>
         </State>
       </Pad>
