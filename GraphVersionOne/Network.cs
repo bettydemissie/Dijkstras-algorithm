@@ -35,9 +35,9 @@ public class Network
     public override string ToString()
     {
         return
-            $"{SourceStation.getName()} ({line}) to {DestinationStation.getName()} ({line})   {time} min";
+            $"{SourceStation.getName()} ({line}) to {DestinationStation.getName()} ({line})  is {time} min with {delay} delay";
     }
-    
+
     public Station getSourceStation()
     {
         return SourceStation;

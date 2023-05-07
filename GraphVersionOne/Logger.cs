@@ -117,7 +117,6 @@ public class Logger
         }
     }
 
-
     //public void LogAllNetworkPath(LinkedList<Network> networks)
     //{
     //    var number = 0;
@@ -184,7 +183,6 @@ public class Logger
         Console.WriteLine(path);
     }
 
-
     public void LogStationNetwork(StationNetwork stationNetwork)
     {
         Console.WriteLine($"__________{stationNetwork.getStation().getName()} Network Station__________");
@@ -209,7 +207,6 @@ public class Logger
         }
         Console.WriteLine(path);
     }
-
 
     public void LogTotalDistance(int distance)
     {

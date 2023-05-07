@@ -13,6 +13,7 @@ namespace GraphVersionOne
         ExcelPackage package;
         ExcelWorksheet worksheet;
         string[] arrayOfStation;
+        
 
         public ReadExcel()
         {
@@ -32,6 +33,7 @@ namespace GraphVersionOne
 
             foreach (var worksheet in package.Workbook.Worksheets)
             {
+                //to test if reading. comment out for submission
                 Console.WriteLine($"Worksheet name: {worksheet.Name}");
                 Console.WriteLine($"Total rows: {worksheet.Dimension.Rows}");
                 Console.WriteLine($"Total columns: {worksheet.Dimension.Columns}");
@@ -75,37 +77,6 @@ namespace GraphVersionOne
                 return "";
             }
         }
-
-        //public void Get2DList()
-        //{
-        //    foreach (string[] stringArray in items)
-        //    {
-        //        foreach (string str in stringArray)
-        //        {
-        //            Console.Write(str + " ");
-
-        //        }
-        //        Console.WriteLine();
-        //    }
-
-        //}
-
-        //public void Get2DList()
-        //{
-        //    LinkedListNode<string[]> currentNode = items.First();
-        //    while (currentNode != null)
-        //    {
-        //        string[] stringArray = currentNode.Value;
-        //        for (int j = 0; j < stringArray.Length; j++)
-        //        {
-        //            string str = stringArray[j];
-        //            Console.Write(str + " ");
-        //        }
-        //        Console.WriteLine();
-
-        //        currentNode = currentNode.Next;
-        //    }
-        //}
 
     }
 }

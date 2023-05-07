@@ -7,11 +7,13 @@ namespace GraphVersionOne;
 	{
 		private MenuOptions controller;
         public StationCreation stations;
+        private Logger logger;
 
-		public Menu()
+        public Menu()
 		{
             stations = new StationCreation();
             controller = new MenuOptions(stations.controller);
+            logger = new Logger();
         }
 
 
@@ -19,16 +21,16 @@ namespace GraphVersionOne;
         {
             while (true)
             {
-                Console.WriteLine("##################################");
-                Console.WriteLine("#      Transport for London      #");
-                Console.WriteLine("#    Getting you there faster    #");
-                Console.WriteLine("################################## ");
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("1. Customer Menu ");
-                Console.WriteLine("2. Admin Menu ");
-                Console.WriteLine();
-                Console.WriteLine("   Please enter your choice: ");
+                logger.Log("##################################");
+                logger.Log("#      Transport for London      #");
+                logger.Log("#    Getting you there faster    #");
+                logger.Log("################################## ");
+                logger.Log("\n");
+                logger.Log("\n");
+                logger.Log("1. Customer Menu ");
+                logger.Log("2. Admin Menu ");
+                logger.Log("\n");
+                logger.Log("   Please enter your choice: ");
 
 
                 //perform necessary checks for input
@@ -62,7 +64,7 @@ namespace GraphVersionOne;
 
                     default:
                         {
-                            Console.WriteLine("Please enter a number between 1 - 2");
+                            logger.Log("Please enter a number between 1 - 2");
                         }
                         break;
                 }

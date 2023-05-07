@@ -7,10 +7,11 @@ public class StationCreation
     public GraphController controller;
     public ReadExcel read;
     public ReadStationsandNetworks text;
+    private Logger logger;
 
     public StationCreation()
     {
-
+        logger = new Logger();
         ReadExcel read = new ReadExcel();
         ReadStationsandNetworks text = new ReadStationsandNetworks(read);
         string filepath = "/Users/Ifeoma1/Downloads/Zone-1-walkingdistance.xlsx";
@@ -21,12 +22,12 @@ public class StationCreation
         var stations = text.GetTheStations(filepathstations);
 
         var networks = text.GetNetworks(filepath);
-        Console.WriteLine("\n");
+        logger.Log("\n");
 
         //create station network
 
         CreateStationNetwork(networks);
-        Console.WriteLine("BREAK!!!!!!!!!");
+        logger.Log("\n");
         controller = new GraphController(graph);
 
     }

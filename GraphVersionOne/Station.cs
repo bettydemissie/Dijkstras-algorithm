@@ -1,5 +1,7 @@
 using System.Security.Cryptography;
 using System.Xml.Linq;
+using Microsoft.Office.Interop.Excel;
+using static GraphVersionOne.AccessStatus;
 
 namespace GraphVersionOne;
 
@@ -8,24 +10,19 @@ public class Station:AccessStatus
     private static int SID = 0;
     private int StationID;                       // a unique ID number 
     private string name;                          // name                      
-    //consider removing since this is implemented in the Network class
-    //private string TubeLine;                     // TubeLine
     private AccessStatus.ACCESS StationAccess;   // access method
     private int TravelZone;                      // Travel Zone its on
     private AccessStatus.STATUS StationStatus;   // open or closed
 
 
-    public Station(string name, int TravelZone)//AccessStatus.ACCESS StationAccess, int TravelZone, AccessStatus.STATUS StationStatus
+    public Station(string name, int TravelZone, ACCESS StationAccess, AccessStatus.STATUS StationStatus)
     {
         this.StationID = SID++;
         this.name = name;
-        //this.TubeLine = TubeLine;
-        //this.StationAccess = StationAccess;
+        this.StationAccess = StationAccess;
+        this.StationStatus = StationStatus;
         this.TravelZone = 1;
-        //this.StationStatus = StationStatus;
-
     }
-
 
     //initialised constructor for the current tests, will delete when other parameters
     //in this constructor is initialised in Station implementation
@@ -33,7 +30,6 @@ public class Station:AccessStatus
     {
         this.StationID = SID++;
         this.name = name;
-        //TubeLine = "";
         StationAccess = AccessStatus.ACCESS.Lift;
         TravelZone = 1;
         StationStatus = AccessStatus.STATUS.Open;
@@ -60,15 +56,20 @@ public class Station:AccessStatus
         return TravelZone;
     }
 
-    //public void setTubeLine(string TubeLine)
-    //{
-    //    this.TubeLine = TubeLine;
-    //}
+    public AccessStatus.ACCESS GetStationAccess()
+    {
+        return StationAccess;
+    }
 
-    //public string getTubeLine()
-    //{
-    //    return TubeLine;
-    //}
+    public AccessStatus.STATUS GetStationStatus()
+    {
+        return StationStatus;
+    }
+
+    public void SetStationStatus(AccessStatus.STATUS status)
+    {
+        StationStatus = status;
+    }
 
     public string getName()
     {
@@ -77,13 +78,6 @@ public class Station:AccessStatus
 
     public override string ToString()
     {
-        return
-            $"Station Name: {name} ," + 
-            $"Station ID: {StationID.ToString()} ," +
-            $"Station Access: {StationAccess.ToString()} ," +
-            $"Travel Zone: {TravelZone.ToString()} ," +
-            $"Station Status: {StationStatus.ToString()} ,";
+        return $"Station Name: {name} | Station ID: {StationID} | Station Access: {StationAccess} | Travel Zone: {TravelZone} | Station Status: {StationStatus}";
     }
-
-    
 }

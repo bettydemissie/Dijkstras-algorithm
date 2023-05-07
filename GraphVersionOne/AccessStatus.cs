@@ -5,7 +5,7 @@ namespace GraphVersionOne
 
     //code referenced from Week1 tutorial solution
 
-    interface AccessStatus
+    public interface AccessStatus
     {
         enum ACCESS { Stairs, Lift, Escalator };    // Station Accesses
 

@@ -242,11 +242,13 @@ public class LinkedList<T>
     public ListNode<T> head;
     public int length = 0;
     public ListNode<T> tail;
+    private Logger logger;
 
     public LinkedList()
     {
         head = null;
         tail = null;
+        logger = new Logger();
     }
 
     public bool IsEmpty()
@@ -268,6 +270,20 @@ public class LinkedList<T>
         {
             return null;
         }
+    }
+
+    public ListNode<T> Find(Func<T, bool> predicate)
+    {
+        ListNode<T> current = head;
+        while (current != null)
+        {
+            if (predicate(current.Value))
+            {
+                return current;
+            }
+            current = current.Next;
+        }
+        return null;
     }
 
     public ListNode<T> First()
@@ -429,7 +445,7 @@ public class LinkedList<T>
     {
         if (head == null)
         {
-            Console.WriteLine("List is empty");
+            logger.Log("List is empty");
         }
         else
         {
@@ -439,7 +455,7 @@ public class LinkedList<T>
 
             while (current != null)
             {
-                Console.WriteLine(current.Value.ToString());
+                logger.Log(current.Value.ToString());
                 current = current.Next;
             }
         }
