@@ -96,5 +96,23 @@ namespace Testing
             //Console.WriteLine("Elapsed time for Closed Routes V3: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
+
+        public double RunTestForCreatingAdacencyListVersion3()
+        {
+            ReadExcel read = new ReadExcel();
+            this.text = new ReadStationsandNetworks(read);
+            string filepath = "/Users/Ifeoma1/Downloads/Zone-1-walkingdistance.xlsx";
+            var networks = text.GetNetworks(filepath);
+
+            // Start timing
+            var stopwatch = Stopwatch.StartNew();
+
+            CreateStationNetwork(networks);
+
+            // Stop timing
+            stopwatch.Stop();
+
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
     }
 }

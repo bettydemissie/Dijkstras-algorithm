@@ -97,5 +97,23 @@ namespace Testing
 
             return stopwatch.Elapsed.TotalMilliseconds;
         }
+
+        public double RunTestForCreatingAdacencyListVersion1()
+        {
+            ReadExcel read = new ReadExcel();
+            this.text = new ReadStationsandNetworks(read);
+            string filepath = "/Users/Ifeoma1/Downloads/Zone-1-walkingdistance.xlsx";
+            var networks = text.GetNetworks(filepath);
+
+            // Start timing
+            var stopwatch = Stopwatch.StartNew();
+
+            CreateStationNetwork(networks);
+
+            // Stop timing
+            stopwatch.Stop();
+
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
     }
 }

@@ -18,15 +18,17 @@ cTest3.RunTestForPrintAllDelayedRoutesVersion3();
 BenchmarkingTestV1 bTest1 = new BenchmarkingTestV1();
 BenchmarkingTestV3 bTest3 = new BenchmarkingTestV3();
 
-double bTest1DijAns = bTest1.RunTestForDijsktraVersion1();
+double bTest1DijkstraAns = bTest1.RunTestForDijsktraVersion1();
 double bTest1TubeAns = bTest1.RunTestForGetTubeInformationVersion1();
 double bTest1ClosedAns = bTest1.RunTestForPrintAllClosedRoutesVersion1();
 double bTest1DelayAns = bTest1.RunTestForAddDelayNetworkVersion1();
+double bTest1AdjacencyListAns = bTest1.RunTestForCreatingAdacencyListVersion1();
 
-double bTest3DijAns = bTest3.RunTestForDijsktraVersion3();
+double bTest3DijkstraAns = bTest3.RunTestForDijsktraVersion3();
 double bTest3TubeAns  = bTest3.RunTestForGetTubeInformationVersion3();
 double bTest3ClosedAns = bTest3.RunTestForPrintAllClosedRoutesVersion3();
 double bTest3DelayAns = bTest3.RunTestForAddDelayNetworkVersion3();
+double bTest3AdjacencyListAns = bTest3.RunTestForCreatingAdacencyListVersion3();
 
 string outputFormat = "{0,-40} {1,-40} {2,-40} {3,-40}";
 
@@ -37,9 +39,9 @@ Console.WriteLine();
 Console.WriteLine("Beginning of Benchmarking Tests");
 Console.WriteLine("-------------------------------");
 Console.WriteLine();
-Console.WriteLine(outputFormat, "Test Name", "Test Name", "VersionOne Elapsed Time (ms)", "VersionThree Elapsed Time (ms)");
+Console.WriteLine(outputFormat, "Test Name", "Station(s)", "VersionOne Elapsed Time (ms)", "VersionThree Elapsed Time (ms)");
 Console.WriteLine();
-Console.WriteLine(outputFormat, "Dijsktra", "Baker Street - Goodge Street", bTest1DijAns, bTest3DijAns);
+Console.WriteLine(outputFormat, "Dijsktra", "Baker Street - Goodge Street", bTest1DijkstraAns, bTest3DijkstraAns);
 Console.WriteLine();
 Console.WriteLine(outputFormat, "Getting Tube Information", "Tower Hill", bTest1TubeAns, bTest3TubeAns);
 Console.WriteLine();
@@ -47,7 +49,7 @@ Console.WriteLine(outputFormat, "Add Delay To Network", "Oxford Circus - Bond St
 Console.WriteLine();
 Console.WriteLine(outputFormat, "Print Closed Routes", " ", bTest1DelayAns, bTest3DelayAns);
 Console.WriteLine();
-Console.WriteLine();
+Console.WriteLine(outputFormat, "Create Adjacency List", " ", bTest1AdjacencyListAns, bTest3AdjacencyListAns);
 Console.WriteLine("-------------------------------");
 Console.WriteLine("End of Benchmarking Tests");
 
