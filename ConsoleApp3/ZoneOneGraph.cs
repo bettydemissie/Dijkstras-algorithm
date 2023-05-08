@@ -250,11 +250,8 @@ public class ZoneOneGraph:ZoneOneGraphInterface
                             LinkedList<Network> newPathList = new LinkedList<Network>();
                             foreach (var pNetwork in pathList)
                             {
-                               
                                 newPathList.AddLast(pNetwork);
-                                Console.WriteLine($"WTnbreeee {pNetwork}");
                             }
-                            Console.WriteLine("WTnbreeee");
                             newPathList.AddLast(network);
                             queue.AddLast(newPathList);
                         }

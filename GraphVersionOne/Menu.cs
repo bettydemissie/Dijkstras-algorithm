@@ -34,17 +34,7 @@ namespace GraphVersionTwo;
 
 
                 //perform necessary checks for input
-                //int option = Convert.ToInt32(Console.ReadLine());
-                //int.TryParse(Console.ReadLine(), out option);
-
                 int option = int.TryParse(Console.ReadLine(), out int inputValue) ? inputValue : 0;
-
-
-
-                //if (!option.GetType().Equals(typeof(int)))
-                //{
-                //    throw new ArgumentException("Input must be an integer data type.", "option");
-                //}
 
                 switch (option)
                 {

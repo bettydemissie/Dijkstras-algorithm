@@ -30,27 +30,6 @@ public class ReadStationsandNetworks
         return IndexOneItem;
     }
 
-
-
-
-    //public LinkedList<Network> GetNetworks(string filepath)
-    //{
-    //    LinkedList<string[]> networkArray = read.Excel(filepath, 0);
-
-    //    LinkedList<Network> arrayNetwork = new LinkedList<Network>();
-
-    //    foreach (string[] network in networkArray)
-    //    {
-    //        if ((int.TryParse(network[3], out int stationDistance)))
-    //        {
-    //            arrayNetwork.AddLast(new Network(new Station(network[0]), new Station(network[1]), network[2], stationDistance));
-    //        }
-
-    //    }
-    //    return arrayNetwork;
-
-    //}
-
     public LinkedList<Network> GetNetworks(string filepath)
     {
         LinkedList<string[]> networkArray = read.Excel(filepath, 0);

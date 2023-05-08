@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj": {}
+    "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj": {}
   },
   "projects": {
-    "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj": {
+    "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj",
-        "projectName": "GraphVersionTwo",
-        "projectPath": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj",
-        "packagesPath": "/Users/Ifeoma1/.nuget/packages/",
-        "outputPath": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/obj/",
+        "projectUniqueName": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj",
+        "projectName": "GraphVersionOne",
+        "projectPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj",
+        "packagesPath": "/Users/bettydemissie/.nuget/packages/",
+        "outputPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/Ifeoma1/.nuget/NuGet/NuGet.Config"
+          "/Users/bettydemissie/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

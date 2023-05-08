@@ -46,19 +46,19 @@ namespace Testing
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Baker Street", "Goodge Street");
         }
-        //far
+        //long distance between stations
         public void RunTest2ForDijsktraVersion1()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Knightsbridge", "Liverpool Street");
         }
-        //medium
+        //medium distance between stations
         public void RunTest3ForDijsktraVersion1()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Bond Street", "Blackfriars");
         }
-        //close
+        //close distance between stations
         public void RunTest4ForDijsktraVersion1()
         {
             // Code for consistency goes here

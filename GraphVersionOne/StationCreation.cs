@@ -25,7 +25,6 @@ public class StationCreation
         logger.Log("\n");
 
         //create station network
-
         CreateStationNetwork(networks);
         logger.Log("\n");
         controller = new GraphController(graph);

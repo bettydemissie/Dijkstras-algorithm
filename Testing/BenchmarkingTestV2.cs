@@ -51,8 +51,6 @@ namespace Testing
             // Stop timing
             stopwatch.Stop();
 
-            // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -66,8 +64,6 @@ namespace Testing
             // Stop timing
             stopwatch.Stop();
 
-            // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -81,8 +77,6 @@ namespace Testing
             // Stop timing
             stopwatch.Stop();
 
-            // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -96,8 +90,6 @@ namespace Testing
             // Stop timing
             stopwatch.Stop();
 
-            // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -110,9 +102,6 @@ namespace Testing
 
             // Stop timing
             stopwatch.Stop();
-
-            // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -126,8 +115,6 @@ namespace Testing
             // Stop timing
             stopwatch.Stop();
 
-            // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -140,8 +127,6 @@ namespace Testing
             // Stop timing
             stopwatch.Stop();
 
-            // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Getting Tube Information V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -154,8 +139,6 @@ namespace Testing
             // Stop timing
             stopwatch.Stop();
 
-            // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Add Delay To Network V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -167,9 +150,6 @@ namespace Testing
 
             // Stop timing
             stopwatch.Stop();
-
-            // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Closed Routes V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
 
             return stopwatch.Elapsed.TotalMilliseconds;
         }

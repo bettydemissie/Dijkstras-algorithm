@@ -25,7 +25,6 @@ namespace Testing
 
             //create station network
             CreateStationNetwork(networks);
-            Console.WriteLine("BREAK!!!!!!!!!");
 
             controller = new GraphController(graph);
         }
@@ -46,21 +45,21 @@ namespace Testing
             controller.FindFastestWalkingRoutes("Baker Street", "Goodge Street");
         }
 
-        //far
+        //long distance between stations
         public void RunTest2ForDijsktraVersion3()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Knightsbridge", "Liverpool Street");
         }
 
-        //medium
+        //medium distance between stations
         public void RunTest3ForDijsktraVersion3()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Bond Street", "Blackfriars");
         }
 
-        //close
+        //close distance between stations
         public void RunTest4ForDijsktraVersion3()
         {
             // Code for consistency goes here
