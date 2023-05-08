@@ -1,8 +1,7 @@
 ﻿using System;
-using Microsoft.Office.Interop.Excel;
 using System.IO;
 using OfficeOpenXml;
-using System.Text;
+//using System.Text;
 
 namespace GraphVersionTwo
 {
@@ -23,7 +22,8 @@ namespace GraphVersionTwo
 
         public LinkedList<string[]> Excel(string path, int page)
         {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial; //to ensure compliance with licensing terms of the library for accessing/debugging purposes
+
             using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
                 package = new ExcelPackage(stream);
@@ -40,7 +40,6 @@ namespace GraphVersionTwo
                 Console.WriteLine("Cell values:");
 
                 string[] arrayOfStation = new string[worksheet.Dimension.Rows * worksheet.Dimension.Columns];
-                int index = 0;
 
                 for (int row = 1; row <= worksheet.Dimension.Rows; row++)
                 {
