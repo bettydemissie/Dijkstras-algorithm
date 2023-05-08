@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphVersionThree", "ConsoleApp3\GraphVersionThree.csproj", "{3BBF6804-2718-490A-AEF1-666DA2504123}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphVersionOne", "GraphVersionOne\GraphVersionOne.csproj", "{7BDDCC2F-AF1D-4B16-815C-4D3A82441B89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphVersionTwo", "GraphVersionOne\GraphVersionTwo.csproj", "{7BDDCC2F-AF1D-4B16-815C-4D3A82441B89}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{42C42D72-67AD-4688-91E3-3EFDD955AE60}"
 EndProject

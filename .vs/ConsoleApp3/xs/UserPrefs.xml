@@ -1,65 +1,63 @@
-﻿<Properties StartupConfiguration="{42C42D72-67AD-4688-91E3-3EFDD955AE60}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Testing PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+﻿<Properties StartupConfiguration="{7BDDCC2F-AF1D-4B16-815C-4D3A82441B89}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.GraphVersionThree PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Testing/Program.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Testing/ConsistencyTestV3.cs">
     <Files>
-      <File FileName="ConsoleApp3/Station.cs" />
+      <File FileName="ConsoleApp3/Station.cs" Line="1" Column="1" />
       <File FileName="ConsoleApp3/StationNetwork.cs" Line="1" Column="1" />
       <File FileName="ConsoleApp3/GraphController.cs" Line="1" Column="1" />
       <File FileName="ConsoleApp3/ZoneOneGraph.cs" Line="260" Column="11" />
-      <File FileName="ConsoleApp3/ZoneOneGraphInterface.cs" />
+      <File FileName="ConsoleApp3/ZoneOneGraphInterface.cs" Line="22" Column="2" />
       <File FileName="ConsoleApp3/Network.cs" Line="19" Column="19" />
       <File FileName="ConsoleApp3/Logger.cs" Line="1" Column="1" />
-      <File FileName="ConsoleApp3/Program.cs" Line="1" Column="1" />
-      <File FileName="GraphVersionOne/Network.cs" />
-      <File FileName="GraphVersionOne/Logger.cs" />
-      <File FileName="GraphVersionOne/GraphController.cs" Line="151" Column="42" />
-      <File FileName="GraphVersionOne/ZoneOneGraphInterface.cs" />
-      <File FileName="GraphVersionOne/ZoneOneGraph.cs" Line="29" Column="6" />
-      <File FileName="GraphVersionOne/PriorityQueueNode.cs" />
+      <File FileName="ConsoleApp3/Program.cs" Line="7" Column="1" />
+      <File FileName="GraphVersionOne/Network.cs" Line="34" Column="5" />
+      <File FileName="GraphVersionOne/Logger.cs" Line="1" Column="1" />
+      <File FileName="GraphVersionOne/GraphController.cs" Line="1" Column="26" />
+      <File FileName="GraphVersionOne/ZoneOneGraphInterface.cs" Line="2" Column="26" />
+      <File FileName="GraphVersionOne/ZoneOneGraph.cs" Line="3" Column="26" />
+      <File FileName="GraphVersionOne/PriorityQueueNode.cs" Line="15" Column="1" />
       <File FileName="GraphVersionOne/ReadExcel.cs" Line="27" Column="1" />
       <File FileName="GraphVersionOne/ReadStationsandNetworks.cs" Line="1" Column="1" />
       <File FileName="GraphVersionOne/Station.cs" Line="55" Column="1" />
-      <File FileName="GraphVersionOne/StationCreation.cs" Line="24" Column="41" />
-      <File FileName="GraphVersionOne/StationNetwork.cs" />
-      <File FileName="GraphVersionOne/ListNode&lt;T&gt;.cs" />
+      <File FileName="GraphVersionOne/StationCreation.cs" Line="44" Column="6" />
+      <File FileName="GraphVersionOne/StationNetwork.cs" Line="28" Column="5" />
+      <File FileName="GraphVersionOne/ListNode&lt;T&gt;.cs" Line="24" Column="1" />
       <File FileName="GraphVersionOne/LinkedList&lt;T&gt;.cs" Line="231" Column="1" />
-      <File FileName="GraphVersionOne/PriorityQueue.cs" />
-      <File FileName="GraphVersionOne/AccessStatus.cs" />
-      <File FileName="GraphVersionOne/MenuOptions.cs" />
-      <File FileName="GraphVersionOne/Menu.cs" />
-      <File FileName="GraphVersionOne/Program.cs" />
+      <File FileName="GraphVersionOne/PriorityQueue.cs" Line="10" Column="57" />
+      <File FileName="GraphVersionOne/AccessStatus.cs" Line="14" Column="1" />
+      <File FileName="GraphVersionOne/MenuOptions.cs" Line="1" Column="1" />
+      <File FileName="GraphVersionOne/Menu.cs" Line="1" Column="1" />
+      <File FileName="GraphVersionOne/Program.cs" Line="1" Column="1" />
       <File FileName="ConsoleApp3/ReadStationsandNetworks.cs" Line="1" Column="1" />
-      <File FileName="ConsoleApp3/StationCreation.cs" Line="17" Column="131" />
+      <File FileName="ConsoleApp3/StationCreation.cs" Line="1" Column="1" />
       <File FileName="ConsoleApp3/ReadExcel.cs" Line="1" Column="1" />
       <File FileName="ConsoleApp3/MenuOptions.cs" Line="16" Column="10" />
       <File FileName="ConsoleApp3/Menu.cs" Line="7" Column="41" />
-      <File FileName="ConsoleApp3/AccessStatus.cs" Line="1" Column="1" />
-      <File FileName="Testing/Program.cs" Line="17" Column="3" />
-      <File FileName="Testing/ConsistencyTestV1.cs" Line="19" Column="131" />
-      <File FileName="Testing/ConsistencyTestV3.cs" Line="40" Column="29" />
-      <File FileName="Testing/BenchmarkingTestV1.cs" Line="179" Column="131" />
-      <File FileName="Testing/BenchmarkingTestV3.cs" Line="178" Column="131" />
+      <File FileName="ConsoleApp3/AccessStatus.cs" />
+      <File FileName="Testing/Program.cs" Line="24" Column="19" />
+      <File FileName="Testing/ConsistencyTestV1.cs" Line="3" Column="26" />
+      <File FileName="Testing/ConsistencyTestV3.cs" Line="3" Column="1" />
+      <File FileName="Testing/BenchmarkingTestV1.cs" Line="4" Column="1" />
+      <File FileName="Testing/BenchmarkingTestV3.cs" Line="120" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ConsoleApp3" expanded="True">
-            <Node name="GraphVersionOne" expanded="True" />
             <Node name="GraphVersionThree" expanded="True" />
-            <Node name="Testing" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
+            <Node name="GraphVersionTwo" expanded="True" />
+            <Node name="Testing" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Testing PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.GraphVersionThree PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.GraphVersionOne PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.GraphVersionTwo PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

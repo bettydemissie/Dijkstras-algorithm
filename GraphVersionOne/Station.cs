@@ -1,9 +1,9 @@
 using System.Security.Cryptography;
 using System.Xml.Linq;
 using Microsoft.Office.Interop.Excel;
-using static GraphVersionOne.AccessStatus;
+using static GraphVersionTwo.AccessStatus;
 
-namespace GraphVersionOne;
+namespace GraphVersionTwo;
 
 public class Station:AccessStatus
 {

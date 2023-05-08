@@ -1,5 +1,5 @@
 using System.Globalization;
-namespace GraphVersionOne;
+namespace GraphVersionTwo;
 
 public interface ZoneOneGraphInterface
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace GraphVersionOne
+namespace GraphVersionTwo
 {
     // Enumeration types for tube Staion access
 

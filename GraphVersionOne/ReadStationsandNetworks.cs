@@ -1,7 +1,7 @@
 ﻿using System;
 //using static System.Collections.Specialized.BitVector32;
 
-namespace GraphVersionOne;
+namespace GraphVersionTwo;
 
 public class ReadStationsandNetworks
 {

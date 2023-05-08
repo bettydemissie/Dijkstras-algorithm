@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GraphVersionOne;
+namespace GraphVersionTwo;
 
 public class PriorityQueue<TElement, TPriority>
 {

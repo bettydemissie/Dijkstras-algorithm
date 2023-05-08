@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GraphVersionOne\GraphVersionOne.csproj" />
     <ProjectReference Include="..\ConsoleApp3\GraphVersionThree.csproj" />
+    <ProjectReference Include="..\GraphVersionOne\GraphVersionTwo.csproj" />
   </ItemGroup>
 </Project>

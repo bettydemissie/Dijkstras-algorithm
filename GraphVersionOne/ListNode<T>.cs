@@ -1,7 +1,7 @@
 ﻿using System;
 using static OfficeOpenXml.ExcelErrorValue;
 
-namespace GraphVersionOne;
+namespace GraphVersionTwo;
 
 public class ListNode<T>
 {

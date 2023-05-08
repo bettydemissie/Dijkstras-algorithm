@@ -1,16 +1,17 @@
 ﻿using System;
-using GraphVersionThree;
+using GraphVersionTwo;
+using System.Diagnostics;
 
 namespace Testing
 {
-	public class ConsistencyTestV3
+	public class ConsistencyTestV2
 	{
         public ZoneOneGraph graph = new ZoneOneGraph();
         public GraphController controller;
         public ReadExcel read;
         public ReadStationsandNetworks text;
 
-        public ConsistencyTestV3()
+        public ConsistencyTestV2()
 		{
             ReadExcel read = new ReadExcel();
             ReadStationsandNetworks text = new ReadStationsandNetworks(read);
@@ -23,49 +24,45 @@ namespace Testing
 
             //create station network
             CreateStationNetwork(networks);
-            Console.WriteLine("BREAK!!!!!!!!!");
 
             controller = new GraphController(graph);
         }
 
-        public void CreateStationNetwork(LinkedList<Network> arrayNetwork)
+        public void CreateStationNetwork(GraphVersionOne.LinkedList<Network> arrayNetwork)
         {
-
-            foreach (Network network in arrayNetwork)
+            var networkNode = arrayNetwork.First();
+            while (networkNode != null)
             {
+                var network = networkNode.Value;
                 graph.AddNetworkToStationNetwork(network.getSourceStation(), network);
+                networkNode = networkNode.Next;
             }
-
         }
 
-        public void RunTest1ForDijsktraVersion3()
+        public void RunTest1ForDijsktraVersion1()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Baker Street", "Goodge Street");
         }
-
         //far
-        public void RunTest2ForDijsktraVersion3()
+        public void RunTest2ForDijsktraVersion1()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Knightsbridge", "Liverpool Street");
         }
-
         //medium
-        public void RunTest3ForDijsktraVersion3()
+        public void RunTest3ForDijsktraVersion1()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Bond Street", "Blackfriars");
         }
-
         //close
-        public void RunTest4ForDijsktraVersion3()
+        public void RunTest4ForDijsktraVersion1()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Green Park", "Goodge Street");
         }
-
-        public void RunTestForGetTubeInformationVersion3()
+        public void RunTestForGetTubeInformationVersion1()
         {
             controller.DisplayTubeInformation("Tower Hill");
         }

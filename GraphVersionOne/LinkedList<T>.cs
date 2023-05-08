@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Linq;
 
-namespace GraphVersionOne;
+namespace GraphVersionTwo;
 
 public class LinkedList<T>
 {
