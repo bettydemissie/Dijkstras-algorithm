@@ -18,9 +18,7 @@ namespace GraphVersionTwo;
     public void managerMenu()
     {
         logger.Log("Please enter the secret password to access this menu");
-        //int inputPassword = Convert.ToInt32(Console.ReadLine());
         int inputPassword = int.TryParse(Console.ReadLine(), out int inputValue) ? inputValue : -1;
-
 
 
         if (inputPassword == adminPassword)
@@ -38,7 +36,6 @@ namespace GraphVersionTwo;
             logger.Log("\n");
             logger.Log("   Please enter your choice: ");
 
-            //int managerOption = Convert.ToInt32(Console.ReadLine());
             int managerOption = int.TryParse(Console.ReadLine(), out int inputValue2) ? inputValue2 : -1;
 
 
@@ -46,18 +43,69 @@ namespace GraphVersionTwo;
             {
                 case 1:
                     {
-                        //add/remove delay
                         logger.Log("What is the Station you would like to start from?");
-                        string sourceStation = Convert.ToString(Console.ReadLine()) ?? ""; //if no input string is then null
+                        string sourceStation;
 
-                        logger.Log("What is the Station you would like to end at?");  //if no input string is then null
-                        string destStation = Convert.ToString(Console.ReadLine()) ?? "";
+                        // Loop until a valid input is entered
+                        while (true)
+                        {
+                            sourceStation = Console.ReadLine();
 
-                        logger.Log("What is the line name?");  //if no input string is then null
-                        string line = Convert.ToString(Console.ReadLine()) ?? "";
+                            // Check if the input is not null or empty and contains only letters and spaces
+                            if (!string.IsNullOrWhiteSpace(sourceStation) && sourceStation.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                            {
+                                break; // Exit the loop if input is valid
+                            }
+
+                            // Prompt the user to enter a valid input
+                            logger.Log("Please enter a valid string for the station name (letters and spaces only):");
+                        }
+
+                        logger.Log("What is the Station you would like to end at?");
+                        string destStation;
+
+                        // Loop until a valid input is entered
+                        while (true)
+                        {
+                            destStation = Console.ReadLine();
+
+                            // Check if the input is not null or empty and contains only letters and spaces
+                            if (!string.IsNullOrWhiteSpace(destStation) && destStation.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                            {
+                                break; // Exit the loop if input is valid
+                            }
+
+                            // Prompt the user to enter a valid input
+                            logger.Log("Please enter a valid string for the station name (letters and spaces only):");
+                        }
+
+                        logger.Log("What is the line name?");
+                        string line;
+                        while (true)
+                        {
+                            line = Console.ReadLine();
+
+                            if (!string.IsNullOrWhiteSpace(line) && line.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                            {
+                                break; // Exit the loop if input is valid
+                            }
+                            logger.Log("Invalid input. Please enter a valid line name:");
+                        }
+
 
                         logger.Log("What is the delay time?");
-                        int delay = Convert.ToInt32(Console.ReadLine());
+                        int delay;
+                        while (true)
+                        {
+                            string input = Console.ReadLine();
+
+                            if (int.TryParse(input, out delay) && delay > 0)
+                            {
+                                break; // Exit the loop if input is valid
+                            }
+
+                            logger.Log("Please enter a valid positive integer for the delay time:");
+                        }
 
                         controller.AddDelayToNetwork(sourceStation, destStation, line, delay);
                     }
@@ -65,21 +113,93 @@ namespace GraphVersionTwo;
 
                 case 2:
                     {
-                        //indicate a route is impossible or becomes possible
                         logger.Log("What is the Station you would like to start from?");
-                        string sourceStation = Convert.ToString(Console.ReadLine()) ?? ""; //if no input string is then empty
+                        string sourceStation;
 
-                        logger.Log("What is the Station you would like to end at?");  //if no input string is then empty
-                        string destStation = Convert.ToString(Console.ReadLine()) ?? "";
+                        // Loop until a valid input is entered
+                        while (true)
+                        {
+                            sourceStation = Console.ReadLine();
 
-                        logger.Log("What is the line name?");  //if no input string is then empty
-                        string line = Convert.ToString(Console.ReadLine()) ?? "";
+                            // Check if the input is not null or empty and contains only letters and spaces
+                            if (!string.IsNullOrWhiteSpace(sourceStation) && sourceStation.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                            {
+                                break; // Exit the loop if input is valid
+                            }
 
-                        logger.Log("What is the reason?");  //if no input string is then empty
-                        string reason = Convert.ToString(Console.ReadLine()) ?? "";
+                            // Prompt the user to enter a valid input
+                            logger.Log("Please enter a valid string for the station name (letters and spaces only):");
+                        }
 
-                        logger.Log("What would be the boolean status? Enter boolean value (true/false) false to close and true to open");  
-                        bool closeStatus = Convert.ToBoolean(Console.ReadLine());
+                        logger.Log("What is the Station you would like to end at?");
+                        string destStation;
+
+                        // Loop until a valid input is entered
+                        while (true)
+                        {
+                            destStation = Console.ReadLine();
+
+                            // Check if the input is not null or empty and contains only letters and spaces
+                            if (!string.IsNullOrWhiteSpace(destStation) && destStation.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                            {
+                                break; // Exit the loop if input is valid
+                            }
+
+                            // Prompt the user to enter a valid input
+                            logger.Log("Please enter a valid string for the station name (letters and spaces only):");
+                        }
+
+                        logger.Log("What is the line name?");
+                        string line;
+
+                        // Loop until a valid input is entered
+                        while (true)
+                        {
+                            line = Console.ReadLine();
+
+                            // Check if the input is not null or empty and contains only letters and spaces
+                            if (!string.IsNullOrWhiteSpace(line) && line.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                            {
+                                break; // Exit the loop if input is valid
+                            }
+
+                            // Prompt the user to enter a valid input
+                            logger.Log("Please enter a valid string for the line name (letters and spaces only):");
+                        }
+
+                        logger.Log("What is the reason?");
+                        string reason;
+
+                        // Loop until a valid input is entered
+                        while (true)
+                        {
+                            reason = Console.ReadLine();
+
+                            // Check if the input is not null or empty and contains only letters and spaces
+                            if (!string.IsNullOrWhiteSpace(reason) && reason.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                            {
+                                break; // Exit the loop if input is valid
+                            }
+
+                            // Prompt the user to enter a valid input
+                            logger.Log("Please enter a valid string for the reason (letters and spaces only):");
+                        }
+
+                        logger.Log("What would be the boolean status? Enter boolean value (true/false) false to close and true to open");
+                        bool closeStatus;
+
+                        // Loop until a valid input is entered
+                        while (true)
+                        {
+                            if (bool.TryParse(Console.ReadLine(), out closeStatus))
+                            {
+                                break; // Exit the loop if input is valid
+                            }
+
+                            // Prompt the user to enter a valid input
+                            logger.Log("Please enter a valid boolean value (true/false):");
+                        }
+
 
                         controller.OpenOrCloseStationsNetwork(sourceStation, destStation, line, reason, closeStatus);
                     }
@@ -117,16 +237,14 @@ namespace GraphVersionTwo;
         logger.Log("#      Transport for London      #");
         logger.Log("#    Getting you there faster    #");
         logger.Log("################################## ");
-        logger.Log("\n");
+        logger.Log("");
         logger.Log("\n");
         logger.Log("1. Find the fastest route between two stations ");
         logger.Log("2. Display Tube Information ");
         logger.Log("\n");
         logger.Log("   Please enter your choice: ");
 
-        //int customerOption = Convert.ToInt32(Console.ReadLine());
         int customerOption = int.TryParse(Console.ReadLine(), out int inputValue) ? inputValue : -1;
-
 
         switch (customerOption)
         {
@@ -134,20 +252,43 @@ namespace GraphVersionTwo;
                 {
 
                     logger.Log("What is the Station you would like to start from?");
-                    string? sourceStation = Convert.ToString(Console.ReadLine()) ?? "";
+                    string sourceStation;
 
-                    if (!sourceStation.GetType().Equals(typeof(string)))
+                    // Loop until a valid input is entered
+                    while (true)
                     {
-                        throw new ArgumentException("Input string must be a string data type.", "sourceStation");
+                        sourceStation = Console.ReadLine();
+
+                        // Check if the input is not null or empty and contains only letters and spaces
+                        if (!string.IsNullOrWhiteSpace(sourceStation) && sourceStation.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                        {
+                            break; // Exit the loop if input is valid
+                        }
+
+                        // Prompt the user to enter a valid input
+                        logger.Log("Please enter a valid string for the station name (letters and spaces only):");
                     }
+
+
 
                     logger.Log("What is the Station you would like to end at?");
-                    string? destStation = Convert.ToString(Console.ReadLine()) ?? "";
+                    string destStation;
 
-                    if (!destStation.GetType().Equals(typeof(string)))
+                    // Loop until a valid input is entered
+                    while (true)
                     {
-                        throw new ArgumentException("Input string must be a string data type.", "destStation");
+                        destStation = Console.ReadLine();
+
+                        // Check if the input is not null or empty and contains only letters and spaces
+                        if (!string.IsNullOrWhiteSpace(destStation) && destStation.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                        {
+                            break; // Exit the loop if input is valid
+                        }
+
+                        // Prompt the user to enter a valid input
+                        logger.Log("Please enter a valid string for the station name (letters and spaces only):");
                     }
+
 
                     controller.FindFastestWalkingRoutes(sourceStation, destStation);
                 }
@@ -156,11 +297,21 @@ namespace GraphVersionTwo;
             case 2:
                 {
                     logger.Log("What is the Station you would like to get the information of?");
-                    string sourceStation = Convert.ToString(Console.ReadLine()) ?? "";
+                    string sourceStation;
 
-                    if (!sourceStation.GetType().Equals(typeof(string)))
+                    // Loop until a valid input is entered
+                    while (true)
                     {
-                        throw new ArgumentException("Input string must be a string data type.", "sourceStation");
+                        sourceStation = Console.ReadLine();
+
+                        // Check if the input is not null or empty and contains only letters and spaces
+                        if (!string.IsNullOrWhiteSpace(sourceStation) && sourceStation.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                        {
+                            break; // Exit the loop if input is valid
+                        }
+
+                        // Prompt the user to enter a valid input
+                        logger.Log("Please enter a valid string for the station name (letters and spaces only):");
                     }
 
                     controller.DisplayTubeInformation(sourceStation);
@@ -173,8 +324,7 @@ namespace GraphVersionTwo;
                 }
                 break;
         }
-
-
     }
+
 }
 

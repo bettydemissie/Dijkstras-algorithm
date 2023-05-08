@@ -14,8 +14,10 @@ namespace Testing
 		{
             ReadExcel read = new ReadExcel();
             ReadStationsandNetworks text = new ReadStationsandNetworks(read);
-            string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
-            string filepathstations = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
+            //string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
+            //string filepathstations = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
+            string filepath = "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
+            string filepathstations = "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
 
             var networks = text.GetNetworks(filepath);
 

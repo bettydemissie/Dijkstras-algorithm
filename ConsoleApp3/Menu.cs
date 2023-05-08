@@ -17,40 +17,43 @@ namespace GraphVersionThree
 
         public void runMenu()
         {
-            logger.Log("##################################");
-            logger.Log("#      Transport for London      #");
-            logger.Log("#    Getting you there faster    #");
-            logger.Log("################################## ");
-            logger.Log("\n");
-            logger.Log("\n");
-            logger.Log("1. Customer Menu ");
-            logger.Log("2. Admin Menu ");
-            logger.Log("\n");
-            logger.Log("   Please enter your choice: ");
-
-            int option = int.TryParse(Console.ReadLine(), out int inputValue) ? inputValue : -1;
-
-            switch (option)
+            while (true)
             {
-                case 1:
-                    {
-                        controller.customerMenu();
-                    }
+                logger.Log("##################################");
+                logger.Log("#      Transport for London      #");
+                logger.Log("#    Getting you there faster    #");
+                logger.Log("################################## ");
+                logger.Log("\n");
+                logger.Log("\n");
+                logger.Log("1. Customer Menu ");
+                logger.Log("2. Admin Menu ");
+                logger.Log("\n");
+                logger.Log("   Please enter your choice: ");
 
-                    break;
+                int option = int.TryParse(Console.ReadLine(), out int inputValue) ? inputValue : -1;
 
-                case 2:
-                    {
-                        controller.managerMenu();
-                    }
+                switch (option)
+                {
+                    case 1:
+                        {
+                            controller.customerMenu();
+                        }
 
-                    break;
+                        break;
 
-                default:
-                    {
-                        logger.Log("Please enter a number between 1 - 2");
-                    }
-                    break;
+                    case 2:
+                        {
+                            controller.managerMenu();
+                        }
+
+                        break;
+
+                    default:
+                        {
+                            logger.Log("Please enter a number between 1 - 2");
+                        }
+                        break;
+                }
             }
         }
     }
