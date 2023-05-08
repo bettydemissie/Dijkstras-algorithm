@@ -81,7 +81,7 @@ public class Logger
         }
     }
 
-    public void LogAllNetworkPath(LinkedList<Network> networks)
+    public string LogAllNetworkPath(LinkedList<Network> networks)
     {
         var number = 0;
         var path = "";
@@ -114,6 +114,7 @@ public class Logger
         routeNumber++;
         path += $"\n({routeNumber}) End:     {lastNetwork.getDestinationStation()} ({lastNetwork.getLine()})";
         Console.WriteLine(path);
+        return path;
     }
 
     public void LogStationNetwork(StationNetwork stationNetwork)
@@ -141,14 +142,16 @@ public class Logger
         Console.WriteLine(path);
     }
 
-    public void LogTotalDistance(int distance)
+    public string LogTotalDistance(int distance)
     {
         Console.WriteLine($"Total Journey Time: {distance} minutes");
+        return $"Total Journey Time: {distance} minutes";
     }
     
-    public void LogDestSourceStationsName(string source, string dest)
+    public string LogDestSourceStationsName(string source, string dest)
     {
         Console.WriteLine($"Route: {source} to {dest}:");
+        return $"Route: {source} to {dest}:";
     }
     
     public void LogDelayedNetwork(Network network)

@@ -162,8 +162,20 @@ public class GraphController
             destnetwork = network;
         }
         
-        logger.LogDestSourceStationsName(source.getName(), dest.getName());
-        logger.LogAllNetworkPath(paths);
-        logger.LogTotalDistance(shortestdistance);
+        var stationame = logger.LogDestSourceStationsName(source.getName(), dest.getName());
+        var path = logger.LogAllNetworkPath(paths);
+        var shortestdist = logger.LogTotalDistance(shortestdistance);
+        writeToFile("V3", stationame, path, shortestdist);
+
+    }
+    private void writeToFile(string filename, string stationame, string paths, string shortestdistance)
+    {
+        using (StreamWriter writer = new StreamWriter(filename))
+        {
+            writer.WriteLine(stationame);
+            writer.WriteLine(paths);
+            writer.WriteLine(shortestdistance);
+            
+        }
     }
 }
