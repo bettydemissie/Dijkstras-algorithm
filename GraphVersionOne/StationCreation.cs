@@ -14,8 +14,8 @@ public class StationCreation
         logger = new Logger();
         ReadExcel read = new ReadExcel();
         ReadStationsandNetworks text = new ReadStationsandNetworks(read);
-        string filepath = "/Users/Ifeoma1/Downloads/Zone-1-walkingdistance.xlsx";
-        string filepathstations = "/Users/Ifeoma1/Downloads/StationsExcel.xlsx";
+        string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
+        string filepathstations = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
         //string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
         //string filepathstations = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
 

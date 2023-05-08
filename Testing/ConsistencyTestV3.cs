@@ -13,8 +13,8 @@ namespace Testing
 		{
             ReadExcel read = new ReadExcel();
             ReadStationsandNetworks text = new ReadStationsandNetworks(read);
-            string filepath = "/Users/Ifeoma1/Downloads/Zone-1-walkingdistance.xlsx";
-            string filepathstations = "/Users/Ifeoma1/Downloads/StationsExcel.xlsx";
+            string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
+            string filepathstations = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
 
             var networks = text.GetNetworks(filepath);
 
@@ -37,7 +37,7 @@ namespace Testing
 
         }
 
-        public void RunTestForDijsktraVersion3()
+        public void RunTest1ForDijsktraVersion3()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Baker Street", "Goodge Street");
