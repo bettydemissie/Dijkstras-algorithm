@@ -44,6 +44,7 @@ namespace GraphVersionThree
                 {
                         var rowValues = new string[4];
                         for (int col = 1; col <= 4; col++)
+
                         {
                             var cell = worksheet.Cells[row, col].GetValue<string>() ?? "";
                             rowValues[col - 1] = cell;
