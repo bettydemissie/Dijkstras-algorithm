@@ -973,19 +973,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/bettydemissie/.nuget/packages/": {}
+    "/Users/Ifeoma1/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
+      "projectUniqueName": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
       "projectName": "ConsoleApp3",
-      "projectPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
-      "packagesPath": "/Users/bettydemissie/.nuget/packages/",
-      "outputPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/",
+      "projectPath": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
+      "packagesPath": "/Users/Ifeoma1/.nuget/packages/",
+      "outputPath": "/Users/Ifeoma1/Documents/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/bettydemissie/.nuget/NuGet/NuGet.Config"
+        "/Users/Ifeoma1/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1038,7 +1038,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }
