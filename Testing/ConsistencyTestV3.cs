@@ -43,19 +43,30 @@ namespace Testing
             controller.FindFastestWalkingRoutes("Baker Street", "Goodge Street");
         }
 
+        //far
+        public void RunTest2ForDijsktraVersion3()
+        {
+            // Code for consistency goes here
+            controller.FindFastestWalkingRoutes("Knightsbridge", "Liverpool Street");
+        }
+
+        //medium
+        public void RunTest3ForDijsktraVersion3()
+        {
+            // Code for consistency goes here
+            controller.FindFastestWalkingRoutes("Bond Street", "Blackfriars");
+        }
+
+        //close
+        public void RunTest4ForDijsktraVersion3()
+        {
+            // Code for consistency goes here
+            controller.FindFastestWalkingRoutes("Green Park", "Goodge Street");
+        }
+
         public void RunTestForGetTubeInformationVersion3()
         {
             controller.DisplayTubeInformation("Tower Hill");
-        }
-
-        public void RunTestForPrintAllDelayedRoutesVersion3()
-        {
-            controller.PrintAllDelayedRoutes();
-        }
-
-        public void RunTestForPrintAllClosedRoutesVersion3()
-        {
-            controller.PrintAllClosedRoutes();
         }
     }
 }

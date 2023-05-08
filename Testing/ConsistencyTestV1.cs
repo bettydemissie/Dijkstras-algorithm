@@ -24,7 +24,6 @@ namespace Testing
 
             //create station network
             CreateStationNetwork(networks);
-            Console.WriteLine("BREAK!!!!!!!!!");
 
             controller = new GraphController(graph);
         }
@@ -40,25 +39,32 @@ namespace Testing
             }
         }
 
-        public void RunTestForDijsktraVersion1()
+        public void RunTest1ForDijsktraVersion1()
         {
             // Code for consistency goes here
             controller.FindFastestWalkingRoutes("Baker Street", "Goodge Street");
         }
-
+        //far
+        public void RunTest2ForDijsktraVersion1()
+        {
+            // Code for consistency goes here
+            controller.FindFastestWalkingRoutes("Knightsbridge", "Liverpool Street");
+        }
+        //medium
+        public void RunTest3ForDijsktraVersion1()
+        {
+            // Code for consistency goes here
+            controller.FindFastestWalkingRoutes("Bond Street", "Blackfriars");
+        }
+        //close
+        public void RunTest4ForDijsktraVersion1()
+        {
+            // Code for consistency goes here
+            controller.FindFastestWalkingRoutes("Green Park", "Goodge Street");
+        }
         public void RunTestForGetTubeInformationVersion1()
         {
             controller.DisplayTubeInformation("Tower Hill");
-        }
-
-        public void RunTestForPrintAllDelayedRoutesVersion1()
-        {
-            controller.PrintAllDelayedRoutes();
-        }
-
-        public void RunTestForPrintAllClosedRoutesVersion1()
-        {
-            controller.PrintAllClosedRoutes();
         }
     }
 }
