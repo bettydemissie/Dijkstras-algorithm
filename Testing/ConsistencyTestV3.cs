@@ -16,6 +16,7 @@ namespace Testing
             ReadExcel read = new ReadExcel();
             ReadStationsandNetworks text = new ReadStationsandNetworks(read);
             logger = new Logger();
+            //change the path below to where this coursework file is located on your device
             string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
             string filepathstations = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
 

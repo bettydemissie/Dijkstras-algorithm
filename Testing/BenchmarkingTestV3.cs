@@ -18,6 +18,7 @@ namespace Testing
             ReadExcel read = new ReadExcel();
             ReadStationsandNetworks text = new ReadStationsandNetworks(read);
             logger = new Logger();
+            //change the path below to where this coursework file is located on your device
             string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
             string filepathstations = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/StationsExcel.xlsx";
           
@@ -53,7 +54,6 @@ namespace Testing
             stopwatch.Stop();
 
             // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -68,7 +68,7 @@ namespace Testing
             stopwatch.Stop();
 
             // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
+           
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -83,7 +83,6 @@ namespace Testing
             stopwatch.Stop();
 
             // Print the elapsed time
-            //Console.WriteLine("Elapsed time for Dijsktra V1: " + stopwatch.Elapsed.TotalMilliseconds + " ms");//as third parameter in table
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
@@ -165,6 +164,7 @@ namespace Testing
         {
             ReadExcel read = new ReadExcel();
             this.text = new ReadStationsandNetworks(read);
+            //change the path below to where this coursework file is located on your device
             string filepath = "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Zone-1-walkingdistance.xlsx";
             var networks = text.GetNetworks(filepath);
 
