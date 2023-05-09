@@ -33,12 +33,7 @@ namespace GraphVersionTwo
 
             foreach (var worksheet in package.Workbook.Worksheets)
             {
-                //to test if reading. comment out for submission
-                Console.WriteLine($"Worksheet name: {worksheet.Name}");
-                Console.WriteLine($"Total rows: {worksheet.Dimension.Rows}");
-                Console.WriteLine($"Total columns: {worksheet.Dimension.Columns}");
-                Console.WriteLine("Cell values:");
-
+                
                 string[] arrayOfStation = new string[worksheet.Dimension.Rows * worksheet.Dimension.Columns];
 
                 for (int row = 1; row <= worksheet.Dimension.Rows; row++)

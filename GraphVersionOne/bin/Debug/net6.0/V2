@@ -1,5 +1,7 @@
-Route: Baker Street to Bond Street:
-(1) Start:   Station Name: Baker Street | Station ID: 68 | Station Access: Lift | Travel Zone: 1 (Jubilee) 
+Route: Baker Street to Marble Arch:
+(1) Start:   Station Name: Baker Street | Station ID: 69 | Station Access: Lift | Travel Zone: 1 (Jubilee) 
 (2)          Baker Street (Jubilee) to Bond Street (Jubilee)  is 16 min with 0 delay
-(3) End:     Station Name: Bond Street | Station ID: 81 | Station Access: Lift | Travel Zone: 1 (Jubilee)
-Total Journey Time: 16 minutes
+(3) Change:  Station Name: Bond Street | Station ID: 84 | Station Access: Lift | Travel Zone: 1 (Jubilee) to Station Name: Bond Street | Station ID: 84 | Station Access: Lift | Travel Zone: 1 (Central) 
+(4)          Bond Street (Central) to Marble Arch (Central)  is 7 min with 0 delay
+(5) End:     Station Name: Marble Arch | Station ID: 119 | Station Access: Lift | Travel Zone: 1 (Central)
+Total Journey Time: 23 minutes

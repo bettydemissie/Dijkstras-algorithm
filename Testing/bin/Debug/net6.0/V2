@@ -1,0 +1,15 @@
+Route: Bond Street to Blackfriars:
+(1) Start:   Station Name: Bond Street | Station ID: 17 | Station Access: Lift | Travel Zone: 1 (Central) 
+(2)          Bond Street (Central) to Oxford Circus (Central)  is 7 min with 0 delay
+(3) Change:  Station Name: Oxford Circus | Station ID: 18 | Station Access: Lift | Travel Zone: 1 (Central) to Station Name: Oxford Circus | Station ID: 18 | Station Access: Lift | Travel Zone: 1 (Bakerloo) 
+(4)          Oxford Circus (Bakerloo) to Piccadilly Circus (Bakerloo)  is 12 min with 0 delay
+(5) Change:  Station Name: Piccadilly Circus | Station ID: 26 | Station Access: Lift | Travel Zone: 1 (Bakerloo) to Station Name: Piccadilly Circus | Station ID: 26 | Station Access: Lift | Travel Zone: 1 (Bakerloo) 
+(6)          Piccadilly Circus (Bakerloo) to Charing Cross (Bakerloo)  is 11 min with 0 delay
+(7) Change:  Station Name: Charing Cross | Station ID: 25 | Station Access: Lift | Travel Zone: 1 (Bakerloo) to Station Name: Charing Cross | Station ID: 25 | Station Access: Lift | Travel Zone: 1 (Bakerloo) 
+(8)          Charing Cross (Bakerloo) to Embankment (Bakerloo)  is 3 min with 0 delay
+(9) Change:  Station Name: Embankment | Station ID: 36 | Station Access: Lift | Travel Zone: 1 (Bakerloo) to Station Name: Embankment | Station ID: 36 | Station Access: Lift | Travel Zone: 1 (District) 
+(10)          Embankment (District) to Temple (District)  is 9 min with 0 delay
+(11) Change:  Station Name: Temple | Station ID: 37 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Temple | Station ID: 37 | Station Access: Lift | Travel Zone: 1 (District) 
+(12)          Temple (District) to Blackfriars (District)  is 10 min with 0 delay
+(13) End:     Station Name: Blackfriars | Station ID: 15 | Station Access: Lift | Travel Zone: 1 (District)
+Total Journey Time: 52 minutes

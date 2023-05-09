@@ -188,4 +188,17 @@ public class Logger
     {
         Console.WriteLine($"{str}");
     }
+
+    public void Log(string str, string str2, string str3, double output, double output2)
+    {
+        Console.WriteLine(str, str2, str3, output, output2);
+    }
+
+    public void Log(string str, string str2, string str3, string str4, string str5)
+    {
+        Console.WriteLine(str, str2, str3, str4, str5);
+    }
+
+
+
 }

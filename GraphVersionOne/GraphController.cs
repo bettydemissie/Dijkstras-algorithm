@@ -64,11 +64,11 @@ public class GraphController
     public void FindFastestWalkingRoutes(string sourceStation, string destStation)
     {
         //added to check if grapgh
-        var source = graph.fetchStation(sourceStation).getStation();
-        var dest = graph.fetchStation(destStation).getStation();
+        var source = graph.fetchStation(sourceStation);
+        var dest = graph.fetchStation(destStation);
         if (source != null && dest != null)
         {
-            djikstra(source,dest);
+            djikstra(source.getStation(), dest.getStation());
         }
         else
         {
@@ -78,12 +78,12 @@ public class GraphController
     
     public void AddDelayToNetwork(string sourceStation, string destStation, string line, int delay)
     {
-        var source = graph?.fetchStation(sourceStation).getStation();
-        var dest = graph?.fetchStation(destStation).getStation();
+        var source = graph?.fetchStation(sourceStation);
+        var dest = graph?.fetchStation(destStation);
         if (source != null  && dest != null)
         {
-            var firstNetwork = graph.GetNetworkInAStationNetwork(source, dest, line);
-            var secondNetwork = graph.GetNetworkInAStationNetwork(dest, source, line);
+            var firstNetwork = graph.GetNetworkInAStationNetwork(source.getStation(), dest.getStation(), line);
+            var secondNetwork = graph.GetNetworkInAStationNetwork(dest.getStation(), source.getStation(), line);
             firstNetwork.addDelay(delay);
             secondNetwork.addDelay(delay);
             logger.LogDelayedNetwork(firstNetwork);
@@ -98,12 +98,12 @@ public class GraphController
     
     public void OpenOrCloseStationsNetwork(string sourceStation, string destStation, string line, string reason, bool closeStatus)
     {
-        var source = graph.fetchStation(sourceStation).getStation();
-        var dest = graph.fetchStation(destStation).getStation();
+        var source = graph.fetchStation(sourceStation);
+        var dest = graph.fetchStation(destStation);
         if (source != null  && dest != null)
         {
-            var firstNetwork = graph.GetNetworkInAStationNetwork(source, dest, line);
-            var secondNetwork = graph.GetNetworkInAStationNetwork(dest, source, line);
+            var firstNetwork = graph.GetNetworkInAStationNetwork(source.getStation(), dest.getStation(), line);
+            var secondNetwork = graph.GetNetworkInAStationNetwork(dest.getStation(), source.getStation(), line);
             firstNetwork.closeNetwork(closeStatus, reason);
             secondNetwork.closeNetwork(closeStatus, reason);
             logger.LogCloseNetwork(firstNetwork);
@@ -118,10 +118,10 @@ public class GraphController
     public void DisplayTubeInformation(string sourceStation)
     {
         //validation check
-        var source = graph.fetchStation(sourceStation).getStation();
+        var source = graph.fetchStation(sourceStation);
         if (source != null)
         {
-            logger.LogStation(source);
+            logger.LogStation(source.getStation());
         }
         else
         {
