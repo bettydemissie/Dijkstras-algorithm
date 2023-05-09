@@ -1,29 +1,11 @@
-Route: Paddington to Tower Hill:
-(1) Start:   Station Name: Paddington | Station ID: 257 | Station Access: Lift | Travel Zone: 1 (District) 
-(2)          Paddington (District) to Edgware Road (District)   10 min
-(3) Change:  Station Name: Edgware Road | Station ID: 256 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Edgware Road | Station ID: 258 | Station Access: Lift | Travel Zone: 1 (Hammersmith & City) 
-(4)          Edgware Road (Hammersmith & City) to Baker Street (Hammersmith & City)   10 min
-(5) Change:  Station Name: Baker Street | Station ID: 259 | Station Access: Lift | Travel Zone: 1 (Hammersmith & City) to Station Name: Baker Street | Station ID: 237 | Station Access: Lift | Travel Zone: 1 (Jubilee) 
-(6)          Baker Street (Jubilee) to Bond Street (Jubilee)   16 min
-(7) Change:  Station Name: Bond Street | Station ID: 236 | Station Access: Lift | Travel Zone: 1 (Jubilee) to Station Name: Bond Street | Station ID: 234 | Station Access: Lift | Travel Zone: 1 (Central) 
-(8)          Bond Street (Central) to Oxford Circus (Central)   7 min
-(9) Change:  Station Name: Oxford Circus | Station ID: 235 | Station Access: Lift | Travel Zone: 1 (Central) to Station Name: Oxford Circus | Station ID: 365 | Station Access: Lift | Travel Zone: 1 (Bakerloo) 
-(10)          Oxford Circus (Bakerloo) to Piccadilly Circus (Bakerloo)   12 min
-(11) Change:  Station Name: Piccadilly Circus | Station ID: 364 | Station Access: Lift | Travel Zone: 1 (Bakerloo) to Station Name: Piccadilly Circus | Station ID: 245 | Station Access: Lift | Travel Zone: 1 (Bakerloo) 
-(12)          Piccadilly Circus (Bakerloo) to Charing Cross (Bakerloo)   11 min
-(13) Change:  Station Name: Charing Cross | Station ID: 244 | Station Access: Lift | Travel Zone: 1 (Bakerloo) to Station Name: Charing Cross | Station ID: 265 | Station Access: Lift | Travel Zone: 1 (Bakerloo) 
-(14)          Charing Cross (Bakerloo) to Embankment (Bakerloo)   3 min
-(15) Change:  Station Name: Embankment | Station ID: 264 | Station Access: Lift | Travel Zone: 1 (Bakerloo) to Station Name: Embankment | Station ID: 266 | Station Access: Lift | Travel Zone: 1 (District) 
-(16)          Embankment (District) to Temple (District)   9 min
-(17) Change:  Station Name: Temple | Station ID: 267 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Temple | Station ID: 388 | Station Access: Lift | Travel Zone: 1 (District) 
-(18)          Temple (District) to Blackfriars (District)   10 min
-(19) Change:  Station Name: Blackfriars | Station ID: 389 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Blackfriars | Station ID: 232 | Station Access: Lift | Travel Zone: 1 (District) 
-(20)          Blackfriars (District) to Mansion House (District)   10 min
-(21) Change:  Station Name: Mansion House | Station ID: 233 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Mansion House | Station ID: 332 | Station Access: Lift | Travel Zone: 1 (District) 
-(22)          Mansion House (District) to Cannon Street (District)   4 min
-(23) Change:  Station Name: Cannon Street | Station ID: 333 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Cannon Street | Station ID: 240 | Station Access: Lift | Travel Zone: 1 (District) 
-(24)          Cannon Street (District) to Monument (District)   5 min
-(25) Change:  Station Name: Monument | Station ID: 241 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Monument | Station ID: 338 | Station Access: Lift | Travel Zone: 1 (District) 
-(26)          Monument (District) to Tower Hill (District)   10 min
-(27) End:     Station Name: Tower Hill | Station ID: 339 | Station Access: Lift | Travel Zone: 1 (District)
-Total Journey Time: 117 minutes
+Route: Baker Street to Goodge Street:
+(1) Start:   Station Name: Baker Street | Station ID: 27 | Station Access: Lift | Travel Zone: 1 (Jubilee) 
+(2)          Baker Street (Jubilee) to Bond Street (Jubilee)   16 min
+(3) Change:  Station Name: Bond Street | Station ID: 26 | Station Access: Lift | Travel Zone: 1 (Jubilee) to Station Name: Bond Street | Station ID: 24 | Station Access: Lift | Travel Zone: 1 (Central) 
+(4)          Bond Street (Central) to Oxford Circus (Central)   7 min
+(5) Change:  Station Name: Oxford Circus | Station ID: 25 | Station Access: Lift | Travel Zone: 1 (Central) to Station Name: Oxford Circus | Station ID: 146 | Station Access: Lift | Travel Zone: 1 (Central) 
+(6)          Oxford Circus (Central) to Tottenham Court Road (Central)   9 min
+(7) Change:  Station Name: Tottenham Court Road | Station ID: 147 | Station Access: Lift | Travel Zone: 1 (Central) to Station Name: Tottenham Court Road | Station ID: 182 | Station Access: Lift | Travel Zone: 1 (Northern) 
+(8)          Tottenham Court Road (Northern) to Goodge Street (Northern)   7 min
+(9) End:     Station Name: Goodge Street | Station ID: 183 | Station Access: Lift | Travel Zone: 1 (Northern)
+Total Journey Time: 39 minutes

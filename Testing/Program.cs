@@ -23,8 +23,8 @@ cTest1.RunTest3ForDijsktraVersion1();
 
 
 //Benchamarking Testing
-BenchmarkingTestV2 bTest1 = new BenchmarkingTestV2();
-BenchmarkingTestV3 bTest3 = new BenchmarkingTestV3();
+//BenchmarkingTestV2 bTest1 = new BenchmarkingTestV2();
+//BenchmarkingTestV3 bTest3 = new BenchmarkingTestV3();
 
 //double bTest1DijkstraAns1 = bTest1.RunTestForDijsktraVersion1_1stEnquiry();
 //double bTest1DijkstraAns2 = bTest1.RunTestForDijsktraVersion1_2ndEnquiry();

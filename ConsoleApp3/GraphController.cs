@@ -165,7 +165,7 @@ public class GraphController
         var stationame = logger.LogDestSourceStationsName(source.getName(), dest.getName());
         var path = logger.LogAllNetworkPath(paths);
         var shortestdist = logger.LogTotalDistance(shortestdistance);
-        writeToFile("V3", stationame, path, shortestdist);
+        writeToFile("V3_output.txt", stationame, path, shortestdist);
 
     }
     private void writeToFile(string filename, string stationame, string paths, string shortestdistance)
