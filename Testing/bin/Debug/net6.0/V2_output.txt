@@ -1,0 +1,29 @@
+Route: Paddington to Tower Hill:
+(1) Start:   Station Name: Paddington | Station ID: 101 | Station Access: Lift | Travel Zone: 1 (District) 
+(2)          Paddington (District) to Edgware Road (District)  is 10 min with 0 delay
+(3) Change:  Station Name: Edgware Road | Station ID: 100 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Edgware Road | Station ID: 100 | Station Access: Lift | Travel Zone: 1 (Hammersmith & City) 
+(4)          Edgware Road (Hammersmith & City) to Baker Street (Hammersmith & City)  is 10 min with 0 delay
+(5) Change:  Station Name: Baker Street | Station ID: 70 | Station Access: Lift | Travel Zone: 1 (Hammersmith & City) to Station Name: Baker Street | Station ID: 70 | Station Access: Lift | Travel Zone: 1 (Jubilee) 
+(6)          Baker Street (Jubilee) to Bond Street (Jubilee)  is 16 min with 0 delay
+(7) Change:  Station Name: Bond Street | Station ID: 85 | Station Access: Lift | Travel Zone: 1 (Jubilee) to Station Name: Bond Street | Station ID: 85 | Station Access: Lift | Travel Zone: 1 (Central) 
+(8)          Bond Street (Central) to Oxford Circus (Central)  is 7 min with 0 delay
+(9) Change:  Station Name: Oxford Circus | Station ID: 86 | Station Access: Lift | Travel Zone: 1 (Central) to Station Name: Oxford Circus | Station ID: 86 | Station Access: Lift | Travel Zone: 1 (Bakerloo) 
+(10)          Oxford Circus (Bakerloo) to Piccadilly Circus (Bakerloo)  is 12 min with 0 delay
+(11) Change:  Station Name: Piccadilly Circus | Station ID: 94 | Station Access: Lift | Travel Zone: 1 (Bakerloo) to Station Name: Piccadilly Circus | Station ID: 94 | Station Access: Lift | Travel Zone: 1 (Bakerloo) 
+(12)          Piccadilly Circus (Bakerloo) to Charing Cross (Bakerloo)  is 11 min with 0 delay
+(13) Change:  Station Name: Charing Cross | Station ID: 93 | Station Access: Lift | Travel Zone: 1 (Bakerloo) to Station Name: Charing Cross | Station ID: 93 | Station Access: Lift | Travel Zone: 1 (Bakerloo) 
+(14)          Charing Cross (Bakerloo) to Embankment (Bakerloo)  is 3 min with 0 delay
+(15) Change:  Station Name: Embankment | Station ID: 104 | Station Access: Lift | Travel Zone: 1 (Bakerloo) to Station Name: Embankment | Station ID: 104 | Station Access: Lift | Travel Zone: 1 (District) 
+(16)          Embankment (District) to Temple (District)  is 9 min with 0 delay
+(17) Change:  Station Name: Temple | Station ID: 105 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Temple | Station ID: 105 | Station Access: Lift | Travel Zone: 1 (District) 
+(18)          Temple (District) to Blackfriars (District)  is 10 min with 0 delay
+(19) Change:  Station Name: Blackfriars | Station ID: 83 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Blackfriars | Station ID: 83 | Station Access: Lift | Travel Zone: 1 (District) 
+(20)          Blackfriars (District) to Mansion House (District)  is 10 min with 0 delay
+(21) Change:  Station Name: Mansion House | Station ID: 84 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Mansion House | Station ID: 84 | Station Access: Lift | Travel Zone: 1 (District) 
+(22)          Mansion House (District) to Cannon Street (District)  is 4 min with 0 delay
+(23) Change:  Station Name: Cannon Street | Station ID: 89 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Cannon Street | Station ID: 89 | Station Access: Lift | Travel Zone: 1 (District) 
+(24)          Cannon Street (District) to Monument (District)  is 5 min with 0 delay
+(25) Change:  Station Name: Monument | Station ID: 90 | Station Access: Lift | Travel Zone: 1 (District) to Station Name: Monument | Station ID: 90 | Station Access: Lift | Travel Zone: 1 (District) 
+(26)          Monument (District) to Tower Hill (District)  is 10 min with 0 delay
+(27) End:     Station Name: Tower Hill | Station ID: 125 | Station Access: Lift | Travel Zone: 1 (District)
+Total Journey Time: 117 minutes

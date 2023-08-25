@@ -956,11 +956,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj",
+      "projectUniqueName": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj",
       "projectName": "GraphVersionOne",
-      "projectPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj",
+      "projectPath": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj",
       "packagesPath": "/Users/bettydemissie/.nuget/packages/",
-      "outputPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/obj/",
+      "outputPath": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bettydemissie/.nuget/NuGet/NuGet.Config"

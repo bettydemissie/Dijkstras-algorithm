@@ -1016,11 +1016,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Testing/Testing.csproj",
+      "projectUniqueName": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/Testing/Testing.csproj",
       "projectName": "Testing",
-      "projectPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Testing/Testing.csproj",
+      "projectPath": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/Testing/Testing.csproj",
       "packagesPath": "/Users/bettydemissie/.nuget/packages/",
-      "outputPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/Testing/obj/",
+      "outputPath": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/Testing/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bettydemissie/.nuget/NuGet/NuGet.Config"
@@ -1035,11 +1035,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj": {
-              "projectPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj"
+            "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj": {
+              "projectPath": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj"
             },
-            "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj": {
-              "projectPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj"
+            "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj": {
+              "projectPath": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/GraphVersionOne/GraphVersionTwo.csproj"
             }
           }
         }

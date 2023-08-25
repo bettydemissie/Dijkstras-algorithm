@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj": {}
+    "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj": {}
   },
   "projects": {
-    "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj": {
+    "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
+        "projectUniqueName": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
         "projectName": "ConsoleApp3",
-        "projectPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
+        "projectPath": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/GraphVersionThree.csproj",
         "packagesPath": "/Users/bettydemissie/.nuget/packages/",
-        "outputPath": "/Users/bettydemissie/Desktop/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/",
+        "outputPath": "/Users/bettydemissie/Desktop/MSc Software Engineering/demissie_G4_CW 4.zip/FastestWalkingRouteWithDjikstraAssignment/ConsoleApp3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bettydemissie/.nuget/NuGet/NuGet.Config"
